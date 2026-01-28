@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | LinguaFlow</title>
+    <meta name="description"
+        content="Transparent pricing for professional translation services. Per-word, per-page, and subscription plans. Starter, Professional, and Enterprise packages with volume discounts.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html" class="active">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-pricing">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Transparent Translation Pricing</h1>
+                <p class="hero-subtitle fade-in-delay">Flexible pricing plans for every need. Per-word, per-page, and
+                    subscription options with no hidden fees. Volume discounts available.</p>
+                <div class="hero-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Custom Quote</button>
+                    <button class="btn btn-outline btn-large">Compare Plans</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Choose Your Plan</h2>
+                <p class="section-subtitle fade-in-delay">Flexible pricing options designed for businesses of all sizes
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card scale-in">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">0.10</span>
+                            <span class="period">/word</span>
+                        </div>
+                        <p class="pricing-description">Perfect for small projects and occasional translation needs</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Basic document translation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Standard delivery (3-5 days)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>25+ language pairs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Email support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Basic quality assurance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-times"></i>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-times"></i>
+                            <span>Dedicated account manager</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <button class="btn btn-outline btn-large">Get Started</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card scale-in-delay recommended">
+                    <div class="pricing-badge">RECOMMENDED</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">0.15</span>
+                            <span class="period">/word</span>
+                        </div>
+                        <p class="pricing-description">Ideal for growing businesses with regular translation needs</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>All Starter features</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Priority delivery (1-2 days)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>50+ language pairs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced quality assurance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Translation memory</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Monthly reporting</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <button class="btn btn-primary btn-large">Get Started</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card scale-in-delay-2">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">0.20</span>
+                            <span class="period">/word</span>
+                        </div>
+                        <p class="pricing-description">Comprehensive solution for large organizations with high-volume
+                            needs</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>All Professional features</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Same-day delivery available</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>100+ language pairs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 dedicated support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Premium quality assurance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Dedicated account manager</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Custom integrations</span>
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <button class="btn btn-outline btn-large">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Per-Word vs Subscription Comparison -->
+    <section class="pricing-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Per-Word vs Subscription Plans</h2>
+                <p class="section-subtitle fade-in-delay">Choose the pricing model that works best for your business</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-feature">Features</div>
+                    <div class="comparison-option">
+                        <h3>Per-Word Pricing</h3>
+                        <p>Pay only for what you translate</p>
+                    </div>
+                    <div class="comparison-option">
+                        <h3>Subscription Plans</h3>
+                        <p>Fixed monthly rate for ongoing needs</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Pricing Model</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span class="price-highlight">$0.10 - $0.25 per word</span>
+                        <span class="price-note">Based on language pair and complexity</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span class="price-highlight">$500 - $5,000 per month</span>
+                        <span class="price-note">Based on word volume and services</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Best For</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>One-time projects, irregular needs, startups</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Regular content, ongoing projects, enterprises</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Turnaround Time</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Standard delivery included</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Priority delivery included</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-users"></i>
+                        <span>Support Level</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Email support</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Priority support + account manager</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-database"></i>
+                        <span>Translation Memory</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Available for additional fee</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Included at no extra cost</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Volume Discounts</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>10-25% for high volume</span>
+                    </div>
+                    <div class="comparison-option">
+                        <span>Built into subscription pricing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volume Discounts -->
+    <section class="volume-discounts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Volume Discounts</h2>
+                <p class="section-subtitle fade-in-delay">Save more with larger translation volumes</p>
+            </div>
+
+            <div class="discount-tiers">
+                <div class="discount-card scale-in">
+                    <div class="discount-header">
+                        <div class="discount-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Bronze Tier</h3>
+                    </div>
+                    <div class="discount-content">
+                        <div class="discount-requirement">
+                            <span class="requirement-label">Monthly Volume</span>
+                            <span class="requirement-value">5,000+ words</span>
+                        </div>
+                        <div class="discount-percentage">
+                            <span class="percentage">10%</span>
+                            <span class="off">OFF</span>
+                        </div>
+                        <ul class="discount-features">
+                            <li><i class="fas fa-check"></i> Basic translation memory</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Monthly reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="discount-card scale-in-delay">
+                    <div class="discount-header">
+                        <div class="discount-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Silver Tier</h3>
+                    </div>
+                    <div class="discount-content">
+                        <div class="discount-requirement">
+                            <span class="requirement-label">Monthly Volume</span>
+                            <span class="requirement-value">10,000+ words</span>
+                        </div>
+                        <div class="discount-percentage">
+                            <span class="percentage">15%</span>
+                            <span class="off">OFF</span>
+                        </div>
+                        <ul class="discount-features">
+                            <li><i class="fas fa-check"></i> Advanced translation memory</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="discount-card scale-in-delay-2">
+                    <div class="discount-header">
+                        <div class="discount-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Gold Tier</h3>
+                    </div>
+                    <div class="discount-content">
+                        <div class="discount-requirement">
+                            <span class="requirement-label">Monthly Volume</span>
+                            <span class="requirement-value">25,000+ words</span>
+                        </div>
+                        <div class="discount-percentage">
+                            <span class="percentage">20%</span>
+                            <span class="off">OFF</span>
+                        </div>
+                        <ul class="discount-features">
+                            <li><i class="fas fa-check"></i> Premium translation memory</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="discount-card scale-in">
+                    <div class="discount-header">
+                        <div class="discount-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Platinum Tier</h3>
+                    </div>
+                    <div class="discount-content">
+                        <div class="discount-requirement">
+                            <span class="requirement-label">Monthly Volume</span>
+                            <span class="requirement-value">50,000+ words</span>
+                        </div>
+                        <div class="discount-percentage">
+                            <span class="percentage">25%</span>
+                            <span class="off">OFF</span>
+                        </div>
+                        <ul class="discount-features">
+                            <li><i class="fas fa-check"></i> Enterprise translation memory</li>
+                            <li><i class="fas fa-check"></i> White-glove service</li>
+                            <li><i class="fas fa-check"></i> Custom pricing solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Frequently Asked Questions</h2>
+                <p class="section-subtitle fade-in-delay">Common questions about our pricing and billing</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item scale-in">
+                    <div class="faq-question">
+                        <h3>How do you calculate per-word pricing?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Per-word pricing is calculated based on the source word count. The rate varies depending on
+                            the language pair, content complexity, and required turnaround time. We provide detailed
+                            quotes before starting any project.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay">
+                    <div class="faq-question">
+                        <h3>Are there any hidden fees or charges?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, we believe in transparent pricing. The quote you receive includes all costs including
+                            translation, editing, proofreading, and quality assurance. Additional services like
+                            notarization or expedited delivery are clearly priced separately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay-2">
+                    <div class="faq-question">
+                        <h3>Can I change plans anytime?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your subscription plan at any time. Changes take effect at
+                            the beginning of the next billing cycle, and we'll prorate any differences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay-3">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, bank transfers, and ACH payments for enterprise
+                            clients. Subscription plans are billed monthly or annually, with discounts for annual
+                            billing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in">
+                    <div class="faq-question">
+                        <h3>Do you offer refunds?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a satisfaction guarantee. If you're not satisfied with the quality of our
+                            translation, we'll work with you to make it right or provide a refund according to our
+                            refund policy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay">
+                    <div class="faq-question">
+                        <h3>How do volume discounts work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Volume discounts are automatically applied based on your monthly or project word count. The
+                            more you translate, the higher the discount tier you qualify for. Discounts are cumulative
+                            and apply to all language pairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Get Started with Transparent Pricing</h2>
+                <p class="cta-subtitle fade-in-delay">Contact our sales team for a custom quote tailored to your
+                    specific needs</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Custom Quote</button>
+                    <button class="btn btn-outline btn-large">Schedule Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = question.querySelector('i');
+
+                    // Close other FAQs
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            const otherItem = otherQuestion.parentElement;
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('i');
+
+                            otherAnswer.style.maxHeight = '0';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current FAQ
+                    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                        answer.style.maxHeight = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Scripts -->
+    <script>
+        // Theme Toggle - Inline Version
+        (function () {
+            console.log('🌓 Inline theme toggle starting...');
+
+            function setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                updateIcons(theme);
+                console.log('✅ Theme set to:', theme);
+            }
+
+            function updateIcons(theme) {
+                const icons = document.querySelectorAll('.theme-toggle i');
+                console.log('🔄 Updating', icons.length, 'icons to', theme);
+
+                icons.forEach((icon, index) => {
+                    try {
+                        if (theme === 'dark') {
+                            icon.className = 'fas fa-sun';
+                        } else {
+                            icon.className = 'fas fa-moon';
+                        }
+                        console.log(`✅ Icon ${index} updated to ${theme}`);
+                    } catch (error) {
+                        console.error('❌ Error updating icon:', error);
+                    }
+                });
+            }
+
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                console.log('🔄 Toggling from', currentTheme, 'to', newTheme);
+                setTheme(newTheme);
+            }
+
+            function attachClickListeners() {
+                const toggles = document.querySelectorAll('.theme-toggle');
+                console.log('🔗 Found', toggles.length, 'theme toggle buttons');
+
+                toggles.forEach((toggle, index) => {
+                    try {
+                        toggle.onclick = function (e) {
+                            console.log('🖱️ Theme toggle button', index, 'clicked!');
+                            e.preventDefault();
+                            e.stopPropagation();
+                            toggleTheme();
+                        };
+                        console.log('✅ Click listener attached to button', index);
+                    } catch (error) {
+                        console.error('❌ Error attaching listener to button', index, ':', error);
+                    }
+                });
+            }
+
+            // Initialize
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            console.log('🎯 Initializing theme to:', savedTheme);
+            setTheme(savedTheme);
+
+            // Attach listeners
+            setTimeout(attachClickListeners, 100);
+
+            // Also try again after a short delay
+            setTimeout(attachClickListeners, 500);
+
+            // Handle storage changes
+            window.addEventListener('storage', function (e) {
+                if (e.key === 'theme') {
+                    console.log('💾 Storage changed, updating theme...');
+                    setTheme(e.newValue || 'light');
+                }
+            });
+
+            console.log('✅ Inline theme toggle loaded successfully!');
+        })();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

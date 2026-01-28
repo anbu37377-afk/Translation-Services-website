@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | LinguaFlow</title>
+    <meta name="description"
+        content="Professional translation services including document translation, website localization, legal translation, medical translation, technical translation, and interpretation services.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-services">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Professional Translation Services</h1>
+                <p class="hero-subtitle fade-in-delay">Comprehensive translation solutions for businesses and
+                    individuals. Document translation, website localization, legal, medical, and technical services by
+                    certified native translators.</p>
+                <div class="hero-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">View All Services</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Translation Service Categories -->
+    <section class="service-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Translation Service Categories</h2>
+                <p class="section-subtitle fade-in-delay">Professional translation solutions for every need and industry
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card scale-in">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Document Translation</h3>
+                    <p>Professional translation of business documents, contracts, reports, manuals, and official papers
+                        with certified accuracy.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Business Documents</li>
+                        <li><i class="fas fa-check"></i> Technical Manuals</li>
+                        <li><i class="fas fa-check"></i> Academic Papers</li>
+                        <li><i class="fas fa-check"></i> Official Papers</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $0.10/word</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+
+                <div class="service-card scale-in-delay">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Localization</h3>
+                    <p>Complete website and app localization with cultural adaptation, SEO optimization, and
+                        multilingual content management.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Content Translation</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Cultural Adaptation</li>
+                        <li><i class="fas fa-check"></i> Mobile Apps</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $0.15/word</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+
+                <div class="service-card scale-in-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Translation</h3>
+                    <p>Certified legal translation for contracts, patents, court documents, immigration papers, and
+                        regulatory compliance.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Court-Certified</li>
+                        <li><i class="fas fa-check"></i> Immigration Papers</li>
+                        <li><i class="fas fa-check"></i> Patents & IP</li>
+                        <li><i class="fas fa-check"></i> Regulatory Docs</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $0.18/word</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+
+                <div class="service-card scale-in">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Medical Translation</h3>
+                    <p>HIPAA-compliant medical translation for clinical trials, pharmaceutical documents, patient
+                        records, and research papers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Clinical Trials</li>
+                        <li><i class="fas fa-check"></i> Pharmaceutical</li>
+                        <li><i class="fas fa-check"></i> Patient Records</li>
+                        <li><i class="fas fa-check"></i> Medical Devices</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $0.20/word</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+
+                <div class="service-card scale-in-delay">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Translation</h3>
+                    <p>Precise technical translation for engineering documents, software localization, user manuals, and
+                        scientific papers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Engineering Docs</li>
+                        <li><i class="fas fa-check"></i> Software Localization</li>
+                        <li><i class="fas fa-check"></i> User Manuals</li>
+                        <li><i class="fas fa-check"></i> Scientific Papers</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $0.16/word</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+
+                <div class="service-card scale-in-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Interpretation Services</h3>
+                    <p>Professional interpretation for conferences, meetings, legal proceedings, medical appointments,
+                        and business negotiations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Simultaneous</li>
+                        <li><i class="fas fa-check"></i> Consecutive</li>
+                        <li><i class="fas fa-check"></i> Remote Video</li>
+                        <li><i class="fas fa-check"></i> Phone Interpretation</li>
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">From $50/hour</span>
+                    </div>
+                    <button class="btn btn-secondary">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Get Started with Professional Translation</h2>
+                <p class="cta-subtitle fade-in-delay">Connect with global audiences through accurate,
+                    culturally-relevant translation services</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">Contact Sales Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

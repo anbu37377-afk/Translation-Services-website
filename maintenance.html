@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Maintenance | LinguaFlow</title>
+    <meta name="description" content="LinguaFlow is currently under maintenance. We'll be back soon with improved translation services.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Maintenance Container -->
+    <div class="maintenance-container">
+        <!-- Maintenance Content -->
+        <div class="maintenance-content scale-in">
+            <div class="maintenance-visual">
+                <div class="maintenance-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+            </div>
+            
+            <h1 class="maintenance-title fade-in">We're Under Maintenance</h1>
+            <p class="maintenance-message fade-in-delay">
+                LinguaFlow is currently undergoing scheduled maintenance to improve our translation services. 
+                We're working hard to bring you an even better experience.
+            </p>
+            
+            <div class="countdown-container fade-in-delay-2">
+                <div class="countdown">
+                    <div class="countdown-number" id="days">00</div>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-number" id="hours">00</div>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            
+            <div class="maintenance-details fade-in-delay-3">
+                <div class="maintenance-info">
+                    <h3>What's happening?</h3>
+                    <p>We're upgrading our systems to provide you with:</p>
+                    <ul>
+                        <li><i class="fas fa-rocket"></i> Enhanced translation speed</li>
+                        <li><i class="fas fa-shield-alt"></i> Improved security features</li>
+                        <li><i class="fas fa-mobile-alt"></i> Better mobile experience</li>
+                        <li><i class="fas fa-globe"></i> Expanded language support</li>
+                    </ul>
+                </div>
+                
+                <div class="maintenance-info">
+                    <h3>Expected completion:</h3>
+                    <p>We expect to be back online in approximately <strong>2 hours</strong>.</p>
+                    <p>All translation projects will be processed as normal once we're back online.</p>
+                </div>
+            </div>
+            
+            <div class="maintenance-actions fade-in-delay-4">
+                <button class="btn btn-primary btn-large" onclick="notifyMe()">
+                    <i class="fas fa-bell"></i>
+                    Notify When Ready
+                </button>
+                <a href="mailto:support@linguaflow.com" class="btn btn-outline btn-large">
+                    <i class="fas fa-envelope"></i>
+                    Contact Support
+                </a>
+            </div>
+            
+            <div class="social-links fade-in-delay-5">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="maintenance-background">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+            <div class="bg-shape bg-shape-3"></div>
+            <div class="bg-shape bg-shape-4"></div>
+            <div class="bg-shape bg-shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Maintenance Page Styles -->
+    <style>
+        /* Maintenance Page Specific Styles */
+        body {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-lg);
+            font-family: var(--font-family);
+        }
+
+        .maintenance-container {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .maintenance-content {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--spacing-3xl);
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .maintenance-content {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-300);
+        }
+
+        .maintenance-visual {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .maintenance-icon {
+            font-size: 5rem;
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-lg);
+            animation: pulse 2s ease infinite;
+        }
+
+        .maintenance-title {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        [data-theme="dark"] .maintenance-title {
+            color: var(--gray-900);
+        }
+
+        .maintenance-message {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: var(--spacing-2xl);
+            line-height: 1.6;
+        }
+
+        [data-theme="dark"] .maintenance-message {
+            color: var(--gray-400);
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .countdown {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--accent-color);
+            line-height: 1;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: var(--spacing-xs);
+        }
+
+        .maintenance-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        [data-theme="dark"] .maintenance-details {
+            color: var(--gray-400);
+        }
+
+        .maintenance-info h3 {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-md);
+        }
+
+        [data-theme="dark"] .maintenance-info h3 {
+            color: var(--gray-100);
+        }
+
+        .maintenance-info p {
+            color: var(--gray-600);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        .maintenance-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .maintenance-info li {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            color: var(--gray-600);
+        }
+
+        [data-theme="dark] .maintenance-info li {
+            color: var(--gray-400);
+        }
+
+        .maintenance-info li i {
+            color: var(--accent-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        .maintenance-actions {
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .social-links {
+            text-align: center;
+        }
+
+        .social-links h3 {
+            font-size: 1rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-md);
+        }
+
+        [data-theme="dark"] .social-links h3 {
+            color: var(--gray-100);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gray-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: all var(--transition-normal);
+        }
+
+        [data-theme="dark"] .social-icon {
+            background-color: var(--gray-700);
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .social-icon i {
+            font-size: 1.25rem;
+        }
+
+        .maintenance-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .bg-shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+            animation-delay: 0s;
+        }
+
+        .bg-shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            animation-delay: 2s;
+        }
+
+        .bg-shape-3 {
+            width: 150px;
+            height: 0px;
+            top: 50%;
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .bg-shape-4 {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            right: 10%;
+            animation-delay: 6s;
+        }
+
+        .bg-shape-5 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 8s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .maintenance-container {
+                padding: var(--spacing-md);
+            }
+
+            .maintenance-content {
+                padding: var(--spacing-xl);
+            }
+
+            .countdown-container {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .maintenance-details {
+                grid-template-columns: 1fr;
+            }
+
+            .maintenance-actions {
+                flex-direction: column;
+            }
+
+            .social-icons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set target date (2 hours from now)
+            const targetDate = new Date().getTime() + (2 * 60 * 60 * 1000);
+            
+            // Update countdown every second
+            const countdownInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                
+                // When countdown reaches zero
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.querySelector('.countdown-container').innerHTML = 
+                        '<div class="completion-message"><i class="fas fa-check-circle"></i><h2>We\'re Back Online!</h2><p>The maintenance is complete. Refresh to continue.</p></div>';
+                    document.querySelector('.maintenance-title').textContent = 'We\'re Back Online!';
+                    document.querySelector('.maintenance-message').textContent = 'Thank you for your patience. LinguaFlow is now fully operational.';
+                    document.querySelector('.maintenance-actions').innerHTML = 
+                        '<a href="index.html" class="btn btn-primary btn-large"><i class="fas fa-home"></i> Go to Homepage</a>';
+                }
+            }, 1000);
+            
+            // Notify me function
+            window.notifyMe = function() {
+                // In a real implementation, this would send a notification
+                alert('Thank you! We\'ll notify you as soon as we\'re back online.');
+            };
+        });
+    </script>
+</body>
+</html>

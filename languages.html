@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages We Translate | LinguaFlow</title>
+    <meta name="description"
+        content="Professional translation services in 100+ languages. Native translators for English, Spanish, French, German, Arabic, Hindi, Chinese, Japanese, Korean and more.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-languages">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Languages We Translate</h1>
+                <p class="hero-subtitle fade-in-delay">Professional translation services in 100+ languages by native
+                    speakers. Breaking language barriers for global communication and business expansion.</p>
+                <div class="hero-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Quote in Any Language</button>
+                    <button class="btn btn-outline btn-large">View All Languages</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Global Language Coverage</h2>
+                <p class="section-subtitle fade-in-delay">Native translators for all major world languages and regional
+                    dialects</p>
+            </div>
+
+            <!-- Language Cards Grid -->
+            <div class="languages-grid">
+                <div class="language-card scale-in">
+                    <div class="language-flag-large">🇺🇸</div>
+                    <div class="language-content">
+                        <h3 class="language-title">English</h3>
+                        <p class="language-description">Native speakers from US, UK, Canada, Australia for all English
+                            variants</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay">
+                    <div class="language-flag-large">🇪🇸</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Spanish</h3>
+                        <p class="language-description">Castilian, Latin American, and regional Spanish variants with
+                            cultural expertise</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-2">
+                    <div class="language-flag-large">🇫🇷</div>
+                    <div class="language-content">
+                        <h3 class="language-title">French</h3>
+                        <p class="language-description">European French, Canadian French, and African French dialects
+                        </p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-3">
+                    <div class="language-flag-large">🇩🇪</div>
+                    <div class="language-content">
+                        <h3 class="language-title">German</h3>
+                        <p class="language-description">Standard German, Austrian German, and Swiss German variants</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-4">
+                    <div class="language-flag-large">🇸🇦</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Arabic</h3>
+                        <p class="language-description">Modern Standard Arabic, Gulf Arabic, Levantine Arabic, and North
+                            African dialects</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-5">
+                    <div class="language-flag-large">🇮🇳</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Hindi</h3>
+                        <p class="language-description">Standard Hindi and regional variants with cultural context
+                            understanding</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in">
+                    <div class="language-flag-large">🇨🇳</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Chinese (Mandarin)</h3>
+                        <p class="language-description">Simplified and Traditional Chinese with regional expertise</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay">
+                    <div class="language-flag-large">🇯🇵</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Japanese</h3>
+                        <p class="language-description">Standard Japanese with business and technical specialization</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-2">
+                    <div class="language-flag-large">🇰🇷</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Korean</h3>
+                        <p class="language-description">Standard Korean with business and cultural expertise</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-3">
+                    <div class="language-flag-large">🇵🇹</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Portuguese</h3>
+                        <p class="language-description">European Portuguese and Brazilian Portuguese variants</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-4">
+                    <div class="language-flag-large">🇷🇺</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Russian</h3>
+                        <p class="language-description">Standard Russian with regional and business specialization</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-5">
+                    <div class="language-flag-large">🇮🇹</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Italian</h3>
+                        <p class="language-description">Standard Italian with regional dialects and business expertise
+                        </p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in">
+                    <div class="language-flag-large">🇳🇱</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Dutch</h3>
+                        <p class="language-description">Netherlands Dutch and Belgian Dutch variants</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay">
+                    <div class="language-flag-large">🇵🇱</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Polish</h3>
+                        <p class="language-description">Standard Polish with business and technical specialization</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-2">
+                    <div class="language-flag-large">🇸🇪</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Swedish</h3>
+                        <p class="language-description">Standard Swedish with business and cultural expertise</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+
+                <div class="language-card scale-in-delay-3">
+                    <div class="language-flag-large">🇹🇷</div>
+                    <div class="language-content">
+                        <h3 class="language-title">Turkish</h3>
+                        <p class="language-description">Standard Turkish with business and legal specialization</p>
+                        <span class="language-status available">Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </ul>
+    </div>
+
+    <div class="benefit-card slide-in-left-delay">
+        <div class="benefit-icon">
+            <i class="fas fa-balance-scale"></i>
+
+
+            <div class="benefit-card slide-in-left-delay-2">
+                <div class="benefit-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Translation Support by Language -->
+    <section class="translation-support">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Translation Support by Language</h2>
+                <p class="section-subtitle fade-in-delay">Comprehensive translation services for all content types and
+                    industries</p>
+            </div>
+
+
+
+
+            <div class="support-grid">
+                <div class="support-card scale-in">
+                    <div class="support-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Document Translation</h4>
+                    <p>Professional translation of business documents, contracts, reports, manuals, and official papers
+                        in all supported languages.</p>
+                    <div class="support-features">
+                        <span class="feature-tag">Legal Documents</span>
+                        <span class="feature-tag">Business Papers</span>
+                        <span class="feature-tag">Technical Manuals</span>
+                    </div>
+                </div>
+
+                <div class="support-card scale-in-delay">
+                    <div class="support-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Websites & Apps</h4>
+                    <p>Complete website and application localization with cultural adaptation, SEO optimization, and
+                        user interface translation.</p>
+                    <div class="support-features">
+                        <span class="feature-tag">Web Localization</span>
+                        <span class="feature-tag">App Translation</span>
+                        <span class="feature-tag">SEO Optimization</span>
+                    </div>
+                </div>
+
+                <div class="support-card scale-in-delay-2">
+                    <div class="support-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>Legal & Technical</h4>
+                    <p>Specialized translation for legal documents, technical manuals, medical content, and
+                        industry-specific materials.</p>
+                    <div class="support-features">
+                        <span class="feature-tag">Legal Translation</span>
+                        <span class="feature-tag">Technical Content</span>
+                        <span class="feature-tag">Medical Documents</span>
+                    </div>
+                </div>
+
+                <div class="support-card scale-in-delay-3">
+                    <div class="support-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Certified Translations</h4>
+                    <p>Official certified translations for immigration, academic, legal, and government requirements
+                        with proper notarization.</p>
+                    <div class="support-features">
+                        <span class="feature-tag">Immigration Papers</span>
+                        <span class="feature-tag">Academic Records</span>
+                        <span class="feature-tag">Government Documents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Translate in Any Language</h2>
+                <p class="cta-subtitle fade-in-delay">Connect with global audiences through professional translation
+                    services in 100+ languages</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Translation Quote</button>
+                    <button class="btn btn-outline btn-large">Contact Language Expert</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

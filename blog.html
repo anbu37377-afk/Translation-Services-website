@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | LinguaFlow</title>
+    <meta name="description"
+        content="Translation industry insights, tips, and best practices. Expert articles on translation services, localization, and global communication strategies.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-blog">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Translation Insights & Resources</h1>
+                <p class="hero-subtitle fade-in-delay">Expert articles, industry trends, and best practices for
+                    professional translation services and global communication strategies.</p>
+                <div class="hero-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Subscribe to Newsletter</button>
+                    <button class="btn btn-outline btn-large">Browse Categories</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="blog-search">
+        <div class="container">
+            <div class="search-filter">
+                <div class="search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search articles, topics, or keywords...">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" id="categoryFilter">
+                            <i class="fas fa-folder"></i>
+                            <span>All Categories</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-menu" id="categoryMenu">
+                            <a href="#" data-category="all">All Categories</a>
+                            <a href="#" data-category="translation">Translation Tips</a>
+                            <a href="#" data-category="localization">Localization</a>
+                            <a href="#" data-category="legal">Legal Translation</a>
+                            <a href="#" data-category="technology">Translation Technology</a>
+                            <a href="#" data-category="business">Global Business</a>
+                            <a href="#" data-category="industry">Industry Insights</a>
+                        </div>
+                    </div>
+
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" id="dateFilter">
+                            <i class="fas fa-calendar"></i>
+                            <span>All Dates</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-menu" id="dateMenu">
+                            <a href="#" data-date="all">All Dates</a>
+                            <a href="#" data-date="today">Today</a>
+                            <a href="#" data-date="week">This Week</a>
+                            <a href="#" data-date="month">This Month</a>
+                            <a href="#" data-date="year">This Year</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="blog-posts">
+                <article class="blog-card scale-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=400&q=80"
+                            alt="Translation Best Practices">
+                        <div class="blog-category">Translation Tips</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 15, 2026</span>
+                            <span class="blog-author">By Sarah Chen</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3 class="blog-title">10 Essential Best Practices for Professional Translation</h3>
+                        <p class="blog-excerpt">Learn the key principles that separate amateur translations from
+                            professional ones. Discover industry standards and quality metrics.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Best Practices</span>
+                            <span class="tag">Quality</span>
+                            <span class="tag">Professional</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card scale-in-delay">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&w=400&q=80"
+                            alt="Website Localization Guide">
+                        <div class="blog-category">Localization</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 12, 2026</span>
+                            <span class="blog-author">By Marco Rossi</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3 class="blog-title">Complete Guide to Website Localization for Global Markets</h3>
+                        <p class="blog-excerpt">Everything you need to know about localizing your website for
+                            international audiences. From cultural adaptation to SEO optimization.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Website</span>
+                            <span class="tag">Localization</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card scale-in-delay-2">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=400&q=80"
+                            alt="Legal Translation Compliance">
+                        <div class="blog-category">Legal Translation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 10, 2026</span>
+                            <span class="blog-author">By Jennifer Martinez</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3 class="blog-title">Navigating Legal Translation Compliance Across Borders</h3>
+                        <p class="blog-excerpt">Understanding the legal requirements for certified translations in
+                            different jurisdictions. Essential for international business operations.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Legal</span>
+                            <span class="tag">Compliance</span>
+                            <span class="tag">Certification</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card scale-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80"
+                            alt="Translation Technology AI">
+                        <div class="blog-category">Translation Technology</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 8, 2026</span>
+                            <span class="blog-author">By David Kim</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3 class="blog-title">AI in Translation: Opportunities and Challenges</h3>
+                        <p class="blog-excerpt">How artificial intelligence is transforming the translation industry and
+                            what it means for professional translators and clients.</p>
+                        <div class="blog-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Technology</span>
+                            <span class="tag">Innovation</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card scale-in-delay">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80"
+                            alt="Global Business Translation">
+                        <div class="blog-category">Global Business</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 5, 2026</span>
+                            <span class="blog-author">By Emma Thompson</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3 class="blog-title">How Translation Drives International Business Growth</h3>
+                        <p class="blog-excerpt">The strategic role of professional translation in expanding global
+                            markets and reaching international customers effectively.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Business</span>
+                            <span class="tag">Growth</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card scale-in-delay-2">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80"
+                            alt="Medical Translation Accuracy">
+                        <div class="blog-category">Industry Insights</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 3, 2026</span>
+                            <span class="blog-author">By Dr. Michael Chen</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <h3 class="blog-title">Ensuring Accuracy in Medical Translation: A Critical Review</h3>
+                        <p class="blog-excerpt">The importance of precision in medical translation and the potential
+                            consequences of errors in healthcare communication.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Medical</span>
+                            <span class="tag">Accuracy</span>
+                            <span class="tag">Healthcare</span>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="pagination-number">12</button>
+                </div>
+                <button class="pagination-btn">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Need Professional Translation Services?</h2>
+                <p class="cta-subtitle fade-in-delay">Get expert translation solutions for your business with certified
+                    native translators</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">Contact Our Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Filter dropdown functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const categoryMenu = document.getElementById('categoryMenu');
+            const dateFilter = document.getElementById('dateFilter');
+            const dateMenu = document.getElementById('dateMenu');
+
+            // Category filter toggle
+            categoryFilter.addEventListener('click', () => {
+                categoryMenu.style.display = categoryMenu.style.display === 'block' ? 'none' : 'block';
+                dateMenu.style.display = 'none';
+            });
+
+            // Date filter toggle
+            dateFilter.addEventListener('click', () => {
+                dateMenu.style.display = dateMenu.style.display === 'block' ? 'none' : 'block';
+                categoryMenu.style.display = 'none';
+            });
+
+            // Category selection
+            document.querySelectorAll('#categoryMenu a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = link.dataset.category;
+                    const text = link.textContent;
+                    categoryFilter.querySelector('span').textContent = text;
+                    categoryMenu.style.display = 'none';
+
+                    // Filter blog posts (placeholder functionality)
+                    filterBlogPosts('category', category);
+                });
+            });
+
+            // Date selection
+            document.querySelectorAll('#dateMenu a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const date = link.dataset.date;
+                    const text = link.textContent;
+                    dateFilter.querySelector('span').textContent = text;
+                    dateMenu.style.display = 'none';
+
+                    // Filter blog posts (placeholder functionality)
+                    filterBlogPosts('date', date);
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!categoryFilter.contains(e.target) && !categoryMenu.contains(e.target)) {
+                    categoryMenu.style.display = 'none';
+                }
+                if (!dateFilter.contains(e.target) && !dateMenu.contains(e.target)) {
+                    dateMenu.style.display = 'none';
+                }
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = searchInput.nextElementSibling;
+
+            searchBtn.addEventListener('click', () => {
+                const query = searchInput.value.trim();
+                if (query) {
+                    performSearch(query);
+                }
+            });
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        performSearch(query);
+                    }
+                }
+            });
+        });
+
+        function filterBlogPosts(type, value) {
+            // Placeholder for filtering functionality
+            console.log(`Filtering by ${type}: ${value}`);
+            // In a real implementation, this would filter the blog posts
+        }
+
+        function performSearch(query) {
+            // Placeholder for search functionality
+            console.log(`Searching for: ${query}`);
+            // In a real implementation, this would perform the search
+        }
+    </script>
+
+</body>
+
+</html>

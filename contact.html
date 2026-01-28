@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LinguaFlow</title>
+    <meta name="description"
+        content="Contact LinguaFlow for professional translation services. Get quotes, support, and consultation. Multiple contact methods and global office locations.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-contact">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Contact LinguaFlow</h1>
+                <p class="hero-subtitle fade-in-delay">Get in touch with our translation experts. Whether you need a
+                    quote, have questions, or want to discuss your translation project, we're here to help.</p>
+                <div class="hero-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">Schedule Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Send Us a Message</h2>
+                <p class="section-subtitle fade-in-delay">Fill out the form below and we'll get back to you within 24
+                    hours</p>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group scale-in">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group scale-in-delay">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group scale-in">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group scale-in-delay">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group scale-in">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group scale-in-delay">
+                        <label for="serviceType">Service Type *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select a service</option>
+                            <option value="document">Document Translation</option>
+                            <option value="website">Website Localization</option>
+                            <option value="legal">Legal Translation</option>
+                            <option value="medical">Medical Translation</option>
+                            <option value="technical">Technical Translation</option>
+                            <option value="interpretation">Interpretation Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group scale-in">
+                        <label for="sourceLanguage">Source Language *</label>
+                        <select id="sourceLanguage" name="sourceLanguage" required>
+                            <option value="">Select source language</option>
+                            <option value="english">English</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="french">French</option>
+                            <option value="german">German</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="japanese">Japanese</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group scale-in-delay">
+                        <label for="targetLanguage">Target Language *</label>
+                        <select id="targetLanguage" name="targetLanguage" required>
+                            <option value="">Select target language</option>
+                            <option value="english">English</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="french">French</option>
+                            <option value="german">German</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="japanese">Japanese</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group scale-in">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Please describe your translation project, including word count, deadline, and any specific requirements..."
+                            required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group scale-in-delay">
+                        <label for="fileUpload">Attach Files (Optional)</label>
+                        <div class="file-upload">
+                            <input type="file" id="fileUpload" name="fileUpload" multiple
+                                accept=".pdf,.doc,.docx,.txt,.rtf">
+                            <label for="fileUpload" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose files or drag and drop</span>
+                                <span class="file-info">PDF, DOC, DOCX, TXT, RTF (Max 10MB)</span>
+                            </label>
+                        </div>
+                        <div class="file-list" id="fileList"></div>
+                    </div>
+
+                    <div class="form-group scale-in">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            I'd like to receive translation tips and industry insights
+                        </label>
+                    </div>
+
+                    <div class="form-actions scale-in-delay">
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        <button type="reset" class="btn btn-outline btn-large">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Get in Touch</h2>
+                <p class="section-subtitle fade-in-delay">Multiple ways to reach our translation experts</p>
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card scale-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <div class="contact-details">
+                        <p><strong>Main Office:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Toll-Free:</strong> 1-800-LINGUA</p>
+                        <p><strong>Support Hours:</strong> Mon-Fri, 9AM-6PM EST</p>
+                        <p><strong>Emergency:</strong> 24/7 for urgent projects</p>
+                    </div>
+                    <button class="btn btn-secondary">Call Now</button>
+                </div>
+
+                <div class="contact-card scale-in-delay">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <div class="contact-details">
+                        <p><strong>General Inquiries:</strong> info@linguaflow.com</p>
+                        <p><strong>Support:</strong> support@linguaflow.com</p>
+                        <p><strong>Sales:</strong> sales@linguaflow.com</p>
+                        <p><strong>Response Time:</strong> Within 24 hours</p>
+                    </div>
+                    <button class="btn btn-secondary">Send Email</button>
+                </div>
+
+                <div class="contact-card scale-in-delay-2">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <div class="contact-details">
+                        <p><strong>Available:</strong> Mon-Fri, 9AM-6PM EST</p>
+                        <p><strong>Response Time:</strong> Instant</p>
+                        <p><strong>Languages:</strong> English, Spanish, French</p>
+                        <p><strong>Support Level:</strong> Basic & Premium</p>
+                    </div>
+                    <button class="btn btn-secondary">Start Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="office-locations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Global Offices</h2>
+                <p class="section-subtitle fade-in-delay">Visit our offices or contact us locally</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card scale-in">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=400&q=80"
+                            alt="New York Office">
+                    </div>
+                    <div class="location-info">
+                        <h3>New York Headquarters</h3>
+                        <div class="location-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Translation Ave, New York, NY 10001</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-envelope"></i> ny@linguaflow.com</p>
+                        </div>
+                        <div class="location-hours">
+                            <p><strong>Hours:</strong> Mon-Fri 9AM-6PM EST</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card scale-in-delay">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80"
+                            alt="London Office">
+                    </div>
+                    <div class="location-info">
+                        <h3>London Office</h3>
+                        <div class="location-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 456 Translation St, London, UK EC1A 1BB</p>
+                            <p><i class="fas fa-phone"></i> +44 20 7123 4567</p>
+                            <p><i class="fas fa-envelope"></i> london@linguaflow.com</p>
+                        </div>
+                        <div class="location-hours">
+                            <p><strong>Hours:</strong> Mon-Fri 9AM-6PM GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card scale-in-delay-2">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=400&q=80"
+                            alt="Tokyo Office">
+                    </div>
+                    <div class="location-info">
+                        <h3>Tokyo Office</h3>
+                        <div class="location-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 789 Translation Blvd, Tokyo, Japan 100-0001</p>
+                            <p><i class="fas fa-phone"></i> +81 3 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> tokyo@linguaflow.com</p>
+                        </div>
+                        <div class="location-hours">
+                            <p><strong>Hours:</strong> Mon-Fri 9AM-6PM JST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Find Us</h2>
+                <p class="section-subtitle fade-in-delay">Our main office location and service areas</p>
+            </div>
+
+            <div class="map-container scale-in">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Interactive Map</h3>
+                        <p>Explore our global office locations and service coverage areas</p>
+                        <button class="btn btn-primary">View Full Map</button>
+                    </div>
+                </div>
+                <div class="map-info">
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Global Coverage</h4>
+                            <p>Serving clients in 50+ countries worldwide</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h4>Language Services</h4>
+                            <p>Native translators for all major languages</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>24/7 Support</h4>
+                            <p>Round-the-clock assistance for urgent projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support CTA -->
+    <section class="support-cta">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-text fade-in">
+                    <h2>Need Immediate Assistance?</h2>
+                    <p>Our support team is available 24/7 for urgent translation projects and emergency services.</p>
+                </div>
+                <div class="support-actions fade-in-delay">
+                    <button class="btn btn-primary btn-large">
+                        <i class="fas fa-phone-alt"></i>
+                        Call Support
+                    </button>
+                    <button class="btn btn-outline btn-large">
+                        <i class="fas fa-comments"></i>
+                        Live Chat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Start Your Translation Project Today</h2>
+                <p class="cta-subtitle fade-in-delay">Connect with our translation experts and get a free quote for your
+                    project</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">Schedule Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form validation and submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const fileInput = document.getElementById('fileUpload');
+            const fileList = document.getElementById('fileList');
+
+            // Form validation
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (validateForm(contactForm)) {
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Thank you for your message! We will get back to you within 24 hours.');
+                        contactForm.reset();
+                        fileList.innerHTML = '';
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }
+            });
+
+            // File upload handling
+            fileInput.addEventListener('change', function (e) {
+                const files = Array.from(e.target.files);
+                fileList.innerHTML = '';
+
+                files.forEach(file => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    fileItem.innerHTML = `
+                        <i class="fas fa-file"></i>
+                        <span class="file-name">${file.name}</span>
+                        <span class="file-size">(${formatFileSize(file.size)})</span>
+                        <button type="button" class="remove-file" data-file="${file.name}">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+                    fileList.appendChild(fileItem);
+                });
+
+                // Add remove file functionality
+                document.querySelectorAll('.remove-file').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        this.parentElement.remove();
+                    });
+                });
+            });
+
+            // Drag and drop functionality
+            const fileUploadLabel = document.querySelector('.file-upload-label');
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                fileUploadLabel.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                fileUploadLabel.addEventListener(eventName, () => {
+                    fileUploadLabel.classList.add('drag-over');
+                }, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                fileUploadLabel.addEventListener(eventName, () => {
+                    fileUploadLabel.classList.remove('drag-over');
+                }, false);
+            });
+
+            fileUploadLabel.addEventListener('drop', function (e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                fileInput.files = files;
+
+                // Trigger change event
+                const event = new Event('change', { bubbles: true });
+                fileInput.dispatchEvent(event);
+            }, false);
+        });
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

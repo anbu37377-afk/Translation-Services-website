@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaFlow | Professional Translation Services</title>
+    <meta name="description"
+        content="Professional translation services for documents, websites, legal, medical, and technical content. Native translators, certified translations, global language support.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html" class="highlight">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html" class="highlight">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title fade-in">Professional Translation Services</h1>
+                    <p class="hero-subtitle fade-in-delay">Break language barriers with certified translations by native
+                        speakers. Document, website, legal, medical, and technical translation services.</p>
+                    <div class="hero-actions fade-in-delay-2">
+                        <button class="btn btn-primary btn-large">Get Quote</button>
+                        <button class="btn btn-outline btn-large">View Services</button>
+                    </div>
+                </div>
+                <div class="hero-media fade-in-delay-3">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+                            alt="Professional Translation Services" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Translation Services Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Translation Services</h2>
+                <p class="section-subtitle fade-in-delay">Professional translation solutions for every industry and need
+                </p>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card scale-in">
+                    <div class="category-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Document Translation</h3>
+                    <p>Professional translation of contracts, reports, manuals, and business documents with certified
+                        accuracy.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+
+                <div class="category-card scale-in-delay">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Localization</h3>
+                    <p>Complete website and app localization with cultural adaptation and SEO optimization for global
+                        markets.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+
+                <div class="category-card scale-in-delay-2">
+                    <div class="category-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Translation</h3>
+                    <p>Certified legal translation services for contracts, patents, court documents, and regulatory
+                        compliance.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+
+                <div class="category-card scale-in-delay-3">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Medical Translation</h3>
+                    <p>Specialized medical translation for clinical trials, patient records, pharmaceutical documents,
+                        and research.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+
+                <div class="category-card scale-in-delay-4">
+                    <div class="category-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Translation</h3>
+                    <p>Precise technical translation for engineering documents, user manuals, specifications, and
+                        technical guides.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+
+                <div class="category-card scale-in-delay-5">
+                    <div class="category-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Interpretation Services</h3>
+                    <p>Professional interpretation for meetings, conferences, legal proceedings, and business
+                        negotiations.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Translation Process Works -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">How Our Translation Process Works</h2>
+                <p class="section-subtitle fade-in-delay">Streamlined workflow ensuring accuracy and timely delivery</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step slide-in-left">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Submit Document</h3>
+                        <p>Upload your document or request a quote. We'll analyze your requirements and provide a
+                            detailed estimate.</p>
+                    </div>
+                </div>
+
+                <div class="step slide-in-left-delay">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Expert Assignment</h3>
+                        <p>We assign native-speaking translators with subject matter expertise to ensure accurate and
+                            contextual translation.</p>
+                    </div>
+                </div>
+
+                <div class="step slide-in-left-delay-2">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Quality Review</h3>
+                        <p>Multi-step review process including editing, proofreading, and quality assurance to deliver
+                            perfect translations.</p>
+                    </div>
+                </div>
+
+                <div class="step slide-in-left-delay-3">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Delivery & Support</h3>
+                        <p>Receive your certified translation with ongoing support for any revisions or additional
+                            requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Why Choose LinguaFlow</h2>
+                <p class="section-subtitle fade-in-delay">Industry-leading translation services with guaranteed quality
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card scale-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certified Translators</h3>
+                    <p>All translations are performed by certified native speakers with industry-specific expertise.</p>
+                </div>
+
+                <div class="feature-card scale-in-delay">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Confidentiality Guaranteed</h3>
+                    <p>Strict confidentiality agreements and secure handling of all sensitive documents and information.
+                    </p>
+                </div>
+
+                <div class="feature-card scale-in-delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Expedited services available with same-day and 24-hour delivery options for urgent projects.</p>
+                </div>
+
+                <div class="feature-card scale-in-delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Coverage</h3>
+                    <p>Translation services for 100+ languages with native speakers in every major language pair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Languages & Industries -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Featured Languages & Industries</h2>
+                <p class="section-subtitle fade-in-delay">Popular language pairs and industries we serve</p>
+            </div>
+
+            <div class="featured-grid">
+                <div class="featured-card bloom">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=400&q=80"
+                            alt="Global Languages">
+                        <div class="featured-badge">Popular</div>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Top Language Pairs</h3>
+                        <p>English-Spanish, English-Chinese, English-Arabic, English-French, German-English,
+                            Japanese-English</p>
+                        <button class="btn btn-primary">View All Languages</button>
+                    </div>
+                </div>
+
+                <div class="featured-card bloom-delay">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80"
+                            alt="Business Industries">
+                        <div class="featured-badge">Expertise</div>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Industry Specialization</h3>
+                        <p>Legal, Medical, Technical, Financial, Marketing, E-commerce, Gaming, Software, Manufacturing
+                        </p>
+                        <button class="btn btn-primary">View Industries</button>
+                    </div>
+                </div>
+
+                <div class="featured-card bloom-delay-2">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=400&q=80"
+                            alt="Certified Documents">
+                    </div>
+                    <div class="featured-info">
+                        <h3>Certified Translations</h3>
+                        <p>Immigration documents, academic transcripts, birth certificates, marriage certificates, legal
+                            contracts</p>
+                        <button class="btn btn-primary">Get Certified</button>
+                    </div>
+                </div>
+
+                <div class="featured-card bloom-delay-3">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80"
+                            alt="Website Localization">
+                    </div>
+                    <div class="featured-info">
+                        <h3>Website Localization</h3>
+                        <p>Complete website translation, SEO optimization, cultural adaptation, and multilingual content
+                            management</p>
+                        <button class="btn btn-primary">Localize Site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">Break Language Barriers Today</h2>
+                <p class="cta-subtitle fade-in-delay">Join thousands of businesses who trust LinguaFlow for professional
+                    translation services</p>
+                <div class="cta-actions fade-in-delay-2">
+                    <button class="btn btn-primary btn-large">Get Free Quote</button>
+                    <button class="btn btn-outline btn-large">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
