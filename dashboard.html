@@ -26,7 +26,7 @@
     <!-- Mobile Header (visible only on mobile) -->
     <header class="dashboard-mobile-header">
         <a href="index.html" class="mobile-brand-center">
-           
+
             <span>LinguaFlow</span>
         </a>
     </header>
@@ -66,9 +66,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" data-page="messages">
+                        <a href="messages.html" data-page="messages">
                             <i class="fas fa-envelope"></i>
                             <span>Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item logout-item"
+                        style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <a href="login.html" class="logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
                         </a>
                     </li>
                 </ul>
@@ -163,22 +170,148 @@
                 <div class="charts-section">
                     <div class="chart-row">
                         <div class="chart-card fade-in">
-                            <div class="chart-placeholder">
-                                <div class="chart-overlay">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Revenue Chart</span>
-                                </div>
+                            <h3 class="chart-title"
+                                style="margin-bottom: 1rem; font-size: 1rem; color: var(--gray-700);">Revenue Overview
+                            </h3>
+                            <div class="chart-container"
+                                style="background: var(--gray-50); border-radius: 8px; padding: 1rem; border: 1px dashed var(--gray-300);">
+                                <img src="https://img.freepik.com/free-vector/data-report-statistic-graphic-business_53876-140645.jpg?t=st=1738584821~exp=1738588421~hmac=8f5b4c1e1d3e1f1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e"
+                                    alt="Revenue Growth Chart"
+                                    style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px; display: block;">
                             </div>
                         </div>
 
                         <div class="chart-card fade-in-delay">
-                            <div class="chart-placeholder">
-                                <div class="chart-overlay">
-                                    <i class="fas fa-chart-pie"></i>
-                                    <span>Language Chart</span>
-                                </div>
+                            <h3 class="chart-title"
+                                style="margin-bottom: 1rem; font-size: 1rem; color: var(--gray-700);">Language
+                                Distribution</h3>
+                            <div class="chart-container"
+                                style="background: var(--gray-50); border-radius: 8px; padding: 1rem; border: 1px dashed var(--gray-300);">
+                                <img src="https://img.freepik.com/free-vector/infographic-dashboard-template_23-2148107931.jpg?t=st=1738584850~exp=1738588450~hmac=8f5b4c1e1d3e1f1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e1d1e"
+                                    alt="Language Usage Chart"
+                                    style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px; display: block;">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Page -->
+            <div class="page-content" id="users-page" style="display: none;">
+                <div class="chart-card fade-in">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; color: var(--gray-800);">Active Users</h3>
+                        <button class="btn btn-primary btn-sm" style="padding: 0.5rem 1rem; font-size: 0.875rem;">+ Add
+                            User</button>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--gray-100); background: var(--gray-50);">
+                                    <th style="padding: 1rem; font-weight: 600; color: var(--gray-600);">User</th>
+                                    <th style="padding: 1rem; font-weight: 600; color: var(--gray-600);">Email</th>
+                                    <th style="padding: 1rem; font-weight: 600; color: var(--gray-600);">Role</th>
+                                    <th style="padding: 1rem; font-weight: 600; color: var(--gray-600);">Status</th>
+                                    <th style="padding: 1rem; font-weight: 600; color: var(--gray-600);">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--gray-100);">
+                                    <td style="padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                                        <div
+                                            style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent-color); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">
+                                            JD</div>
+                                        <span style="font-weight: 500;">John Doe</span>
+                                    </td>
+                                    <td style="padding: 1rem; color: var(--gray-600);">john.doe@example.com</td>
+                                    <td style="padding: 1rem;"><span
+                                            style="background: #eef2ff; color: #4f46e5; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Administrator</span>
+                                    </td>
+                                    <td style="padding: 1rem;"><span
+                                            style="display: flex; align-items: center; gap: 0.4rem; color: #059669; font-size: 0.875rem;"><i
+                                                class="fas fa-circle" style="font-size: 0.5rem;"></i> Active</span></td>
+                                    <td style="padding: 1rem;">
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--gray-100);">
+                                    <td style="padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                                        <div
+                                            style="width: 32px; height: 32px; border-radius: 50%; background: #ec4899; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">
+                                            SA</div>
+                                        <span style="font-weight: 500;">Sarah Anderson</span>
+                                    </td>
+                                    <td style="padding: 1rem; color: var(--gray-600);">sarah.a@lingua.com</td>
+                                    <td style="padding: 1rem;"><span
+                                            style="background: #f0fdf4; color: #166534; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Translator</span>
+                                    </td>
+                                    <td style="padding: 1rem;"><span
+                                            style="display: flex; align-items: center; gap: 0.4rem; color: #059669; font-size: 0.875rem;"><i
+                                                class="fas fa-circle" style="font-size: 0.5rem;"></i> Active</span></td>
+                                    <td style="padding: 1rem;">
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--gray-100);">
+                                    <td style="padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                                        <div
+                                            style="width: 32px; height: 32px; border-radius: 50%; background: #f59e0b; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">
+                                            MK</div>
+                                        <span style="font-weight: 500;">Mike Kelly</span>
+                                    </td>
+                                    <td style="padding: 1rem; color: var(--gray-600);">m.kelly@client.io</td>
+                                    <td style="padding: 1rem;"><span
+                                            style="background: #fff7ed; color: #9a3412; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Client</span>
+                                    </td>
+                                    <td style="padding: 1rem;"><span
+                                            style="display: flex; align-items: center; gap: 0.4rem; color: #d97706; font-size: 0.875rem;"><i
+                                                class="fas fa-clock" style="font-size: 0.5rem;"></i> Pending</span></td>
+                                    <td style="padding: 1rem;">
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button
+                                            style="border: none; background: none; color: var(--gray-400); cursor: pointer; padding: 0.25rem;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Page Shell -->
+            <div class="page-content" id="orders-page" style="display: none;">
+                <div class="chart-card fade-in">
+                    <div style="text-align: center; padding: 3rem 0;">
+                        <i class="fas fa-shopping-cart"
+                            style="font-size: 3rem; color: var(--gray-200); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--gray-800);">No Orders Yet</h3>
+                        <p style="color: var(--gray-500);">New translation orders will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages Page Shell -->
+            <div class="page-content" id="messages-page" style="display: none;">
+                <div class="chart-card fade-in">
+                    <div style="text-align: center; padding: 3rem 0;">
+                        <i class="fas fa-envelope-open-text"
+                            style="font-size: 3rem; color: var(--gray-200); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--gray-800);">Inbox Empty</h3>
+                        <p style="color: var(--gray-500);">Client messages and inquiries will show up here.</p>
                     </div>
                 </div>
             </div>
@@ -196,8 +329,9 @@
 
         .sidebar {
             width: 280px;
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: #1A365D;
+            /* Keep primary dark blue regardless of theme */
+            color: #FFFFFF;
             display: flex;
             flex-direction: column;
             position: fixed;
@@ -232,12 +366,22 @@
             flex: 1;
             padding: var(--spacing-lg) 0;
             overflow-y: auto;
+            display: flex;
+            /* Added flex */
+            flex-direction: column;
+            /* Added flex-direction */
         }
 
         .nav-menu {
             list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            /* Added flex */
+            flex-direction: column;
+            /* Added flex-direction */
+            flex: 1;
+            /* Added flex: 1 to fill space */
         }
 
         .nav-item {
@@ -249,7 +393,8 @@
             align-items: center;
             gap: var(--spacing-md);
             padding: var(--spacing-md) var(--spacing-lg);
-            color: var(--gray-300);
+            color: #CBD5E0;
+            /* Light gray for sidebar text */
             text-decoration: none;
             border-radius: var(--radius-md);
             transition: all var(--transition-normal);
@@ -258,7 +403,7 @@
         .nav-item:hover a,
         .nav-item.active a {
             background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
+            color: #FFFFFF;
         }
 
         .nav-item i {
@@ -266,11 +411,33 @@
             text-align: center;
         }
 
+        /* Logout Button Specific Styles */
+        .logout-item {
+            margin-top: auto !important;
+            /* Force to bottom of sidebar */
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logout-link {
+            color: #ffda79 !important;
+            /* Soft gold/yellow for logout */
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .logout-link:hover {
+            background-color: rgba(255, 69, 58, 0.1) !important;
+            /* Subtle red hover */
+            color: #ff453a !important;
+            /* Red text on hover */
+        }
+
         /* Main Content */
         .main-content {
             flex: 1;
             margin-left: 280px;
             background-color: var(--white);
+            color: var(--gray-900);
             min-height: 100vh;
         }
 
@@ -287,7 +454,7 @@
         .page-title {
             font-size: 2rem;
             font-weight: var(--font-weight-bold);
-            color: var(--gray-900);
+            color: var(--gray-900) !important;
             margin-bottom: var(--spacing-xs);
         }
 
@@ -404,6 +571,16 @@
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
+                position: fixed;
+                height: 100vh;
+            }
+
+            [data-theme="dark"] .sidebar {
+                background-color: #1A365D;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
             }
 
             .main-content {
@@ -429,22 +606,42 @@
 
             navItems.forEach(item => {
                 item.addEventListener('click', function (e) {
-                    e.preventDefault();
-
                     const targetPage = this.dataset.page;
 
-                    // Update active state
-                    navItems.forEach(nav => nav.classList.remove('active'));
-                    this.classList.add('active');
+                    if (targetPage) {
+                        e.preventDefault();
 
-                    // Show corresponding page
-                    pages.forEach(page => {
-                        page.style.display = 'none';
-                    });
+                        // Update active state
+                        document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                        this.parentElement.classList.add('active');
 
-                    const targetPageElement = document.getElementById(`${targetPage}-page`);
-                    if (targetPageElement) {
-                        targetPageElement.style.display = 'block';
+                        // Show corresponding page
+                        pages.forEach(page => {
+                            page.style.display = 'none';
+                        });
+
+                        const targetPageElement = document.getElementById(`${targetPage}-page`);
+                        if (targetPageElement) {
+                            targetPageElement.style.display = 'block';
+
+                            // Update Header Title and Subtitle dynamically
+                            const pageTitle = document.querySelector('.page-title');
+                            const pageSubtitle = document.querySelector('.page-subtitle');
+
+                            if (targetPage === 'analytics') {
+                                pageTitle.textContent = 'Analytics Dashboard';
+                                pageSubtitle.textContent = 'Overview of your translation business performance';
+                            } else if (targetPage === 'users') {
+                                pageTitle.textContent = 'User Management';
+                                pageSubtitle.textContent = 'Manage and monitor user accounts and permissions';
+                            } else if (targetPage === 'orders') {
+                                pageTitle.textContent = 'Orders';
+                                pageSubtitle.textContent = 'Track and manage translation service orders';
+                            } else if (targetPage === 'messages') {
+                                pageTitle.textContent = 'Inbox';
+                                pageSubtitle.textContent = 'Client communications and system notifications';
+                            }
+                        }
                     }
                 });
             });
