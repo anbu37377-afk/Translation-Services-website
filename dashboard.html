@@ -26,9 +26,17 @@
     <!-- Mobile Header (visible only on mobile) -->
     <header class="dashboard-mobile-header">
         <a href="index.html" class="mobile-brand-center">
-
+            <i class="fas fa-language"></i>
             <span>LinguaFlow</span>
         </a>
+        <div class="mobile-header-actions">
+            <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="sidebar-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Dashboard Container -->
@@ -567,12 +575,115 @@
             margin-bottom: var(--spacing-sm);
         }
 
+        /* Mobile Header Styles */
+        .dashboard-mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #1A365D;
+            color: #FFFFFF;
+            z-index: 1001;
+            padding: 0 var(--spacing-md);
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-brand-center {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: var(--font-weight-bold);
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .mobile-brand-center i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+        .mobile-header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .mobile-theme-toggle {
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-toggle-btn {
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hide-on-mobile {
+            display: flex;
+        }
+
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            .dashboard-mobile-header {
+                display: flex;
+            }
+
+            .hide-on-mobile {
+                display: none !important;
+            }
+
             .sidebar {
                 transform: translateX(-100%);
                 position: fixed;
                 height: 100vh;
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
+                width: 280px;
+                top: 0;
+                left: 0;
             }
 
             [data-theme="dark"] .sidebar {
@@ -583,16 +694,169 @@
                 transform: translateX(0);
             }
 
+            .sidebar-nav {
+                display: flex !important;
+                padding-top: 80px;
+                overflow-y: auto;
+            }
+
+            .nav-menu {
+                display: flex !important;
+                width: 100%;
+            }
+
+            .nav-item {
+                display: block !important;
+            }
+
+            .nav-item a {
+                display: flex !important;
+                color: #CBD5E0 !important;
+            }
+
+            .nav-item a span {
+                display: inline !important;
+            }
+
             .main-content {
                 margin-left: 0;
+                padding-top: 60px;
+            }
+
+            .dashboard-header {
+                padding: var(--spacing-lg) var(--spacing-md);
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .header-left {
+                width: 100%;
+            }
+
+            .header-right {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--spacing-sm);
+            }
+
+            .header-right .btn {
+                flex: 1;
+                min-width: 120px;
+                font-size: 0.875rem;
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+
+            /* Hide desktop theme toggle on mobile */
+            .header-right .theme-toggle:not(.mobile-theme-toggle) {
+                display: none !important;
+            }
+
+            .page-title {
+                font-size: 1.5rem;
+            }
+
+            .page-subtitle {
+                font-size: 0.875rem;
+            }
+
+            .page-content {
+                padding: var(--spacing-lg) var(--spacing-md);
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .stat-card {
+                padding: var(--spacing-lg);
+                flex-direction: row;
+            }
+
+            .stat-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+                flex-shrink: 0;
+            }
+
+            .stat-content {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .stat-content h3 {
+                font-size: 0.75rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .stat-change {
+                font-size: 0.75rem;
             }
 
             .chart-row {
                 grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .chart-card {
+                padding: var(--spacing-lg);
+            }
+
+            .chart-card h3 {
+                font-size: 0.875rem !important;
+            }
+
+            .chart-container img {
+                height: 200px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-mobile-header {
+                padding: 0 var(--spacing-sm);
+            }
+
+            .mobile-brand-center {
+                font-size: 1.1rem;
+            }
+
+            .mobile-brand-center i {
+                font-size: 1.25rem;
+            }
+
+            .page-title {
+                font-size: 1.25rem;
+            }
+
+            .page-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .stat-card {
+                padding: var(--spacing-md);
+            }
+
+            .stat-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+
+            .stat-number {
+                font-size: 1.25rem;
+            }
+
+            .header-right .btn {
+                font-size: 0.8rem;
+                padding: var(--spacing-xs) var(--spacing-sm);
             }
         }
     </style>
@@ -649,11 +913,21 @@
             // Sidebar toggle for mobile
             const sidebarToggles = document.querySelectorAll('.sidebar-toggle, .sidebar-toggle-btn');
             const sidebar = document.querySelector('.sidebar');
+            const overlay = document.createElement('div');
+            overlay.className = 'sidebar-overlay';
+            document.body.appendChild(overlay);
 
             sidebarToggles.forEach(toggle => {
                 toggle.addEventListener('click', function () {
-                    sidebar.classList.toggle('collapsed');
+                    sidebar.classList.toggle('active');
+                    overlay.classList.toggle('active');
                 });
+            });
+
+            // Close sidebar when clicking overlay
+            overlay.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
             });
         });
     </script>

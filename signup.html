@@ -214,7 +214,7 @@
             gap: var(--spacing-sm);
             font-weight: var(--font-weight-bold);
             font-size: 1.5rem;
-            color: var(--gray-900);
+            color: var(--white);
             text-decoration: none;
             transition: all var(--transition-normal);
             position: relative;
@@ -229,9 +229,13 @@
             color: var(--white);
         }
 
+        [data-theme="dark"] .signup-brand .logo span {
+            color: var(--white) !important;
+        }
+
         .signup-brand .logo:hover {
             transform: translateY(-2px);
-            color: var(--accent-dark);
+            opacity: 0.9;
         }
 
         .signup-brand .logo i {
@@ -659,9 +663,9 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 520px) {
+        @media (max-width: 768px) {
             body {
-                padding: var(--spacing-xl) var(--spacing-md);
+                padding: var(--spacing-lg) var(--spacing-md);
             }
 
             .signup-container {
@@ -669,12 +673,60 @@
             }
 
             .signup-form-container {
-                padding: var(--spacing-xl);
+                padding: var(--spacing-2xl) var(--spacing-lg);
                 border-radius: var(--radius-xl);
+            }
+
+            .signup-brand .logo {
+                font-size: 1.35rem;
+            }
+
+            .signup-brand .logo i {
+                font-size: 1.5rem;
             }
 
             .signup-header h1 {
                 font-size: 1.75rem;
+            }
+
+            .signup-header p {
+                font-size: 0.9rem;
+            }
+
+            .input-wrapper input {
+                padding: var(--spacing-md) 2.75rem var(--spacing-md) 2.75rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: var(--spacing-md);
+            }
+
+            .signup-container {
+                max-width: 100%;
+            }
+
+            .signup-form-container {
+                padding: var(--spacing-xl) var(--spacing-md);
+                border-radius: var(--radius-lg);
+            }
+
+            .signup-brand .logo {
+                font-size: 1.25rem;
+            }
+
+            .signup-brand .logo i {
+                font-size: 1.35rem;
+            }
+
+            .signup-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .signup-header p {
+                font-size: 0.85rem;
             }
 
             .form-row {
@@ -686,6 +738,20 @@
                 flex-direction: column;
                 gap: var(--spacing-sm);
             }
+
+            .checkbox-label {
+                font-size: 0.8rem;
+            }
+
+            .input-wrapper input {
+                padding: var(--spacing-sm) 2.5rem var(--spacing-sm) 2.5rem;
+                font-size: 0.9rem;
+            }
+
+            .btn-large {
+                padding: var(--spacing-md) var(--spacing-lg);
+                font-size: 0.95rem;
+            }
         }
 
         @media (max-height: 800px) {
@@ -696,6 +762,10 @@
 
             .signup-brand {
                 margin-bottom: var(--spacing-md);
+            }
+
+            .signup-form-container {
+                padding: var(--spacing-xl);
             }
         }
     </style>

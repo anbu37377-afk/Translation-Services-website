@@ -147,7 +147,7 @@
             gap: var(--spacing-sm);
             font-weight: var(--font-weight-bold);
             font-size: 1.5rem;
-            color: var(--gray-900);
+            color: var(--white);
             text-decoration: none;
             transition: all var(--transition-normal);
             position: relative;
@@ -162,9 +162,13 @@
             color: var(--white);
         }
 
+        [data-theme="dark"] .login-brand .logo span {
+            color: var(--white) !important;
+        }
+
         .login-brand .logo:hover {
             transform: translateY(-2px);
-            color: var(--accent-dark);
+            opacity: 0.9;
         }
 
         .login-brand .logo i {
@@ -557,9 +561,9 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             body {
-                padding: var(--spacing-xl) var(--spacing-md);
+                padding: var(--spacing-lg) var(--spacing-md);
             }
 
             .login-container {
@@ -567,12 +571,60 @@
             }
 
             .login-form-container {
-                padding: var(--spacing-xl);
+                padding: var(--spacing-2xl) var(--spacing-lg);
                 border-radius: var(--radius-xl);
+            }
+
+            .login-brand .logo {
+                font-size: 1.35rem;
+            }
+
+            .login-brand .logo i {
+                font-size: 1.5rem;
             }
 
             .login-header h1 {
                 font-size: 1.75rem;
+            }
+
+            .login-header p {
+                font-size: 0.9rem;
+            }
+
+            .input-wrapper input {
+                padding: var(--spacing-md) 2.75rem var(--spacing-md) 2.75rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: var(--spacing-md);
+            }
+
+            .login-container {
+                max-width: 100%;
+            }
+
+            .login-form-container {
+                padding: var(--spacing-xl) var(--spacing-md);
+                border-radius: var(--radius-lg);
+            }
+
+            .login-brand .logo {
+                font-size: 1.25rem;
+            }
+
+            .login-brand .logo i {
+                font-size: 1.35rem;
+            }
+
+            .login-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .login-header p {
+                font-size: 0.85rem;
             }
 
             .social-buttons {
@@ -581,11 +633,19 @@
             }
 
             .form-options {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
                 gap: var(--spacing-md);
-                flex-wrap: wrap;
+            }
+
+            .checkbox-label,
+            .forgot-password {
+                font-size: 0.8rem;
+            }
+
+            .input-wrapper input {
+                padding: var(--spacing-sm) 2.5rem var(--spacing-sm) 2.5rem;
+                font-size: 0.9rem;
             }
         }
 
@@ -597,6 +657,10 @@
 
             .login-brand {
                 margin-bottom: var(--spacing-md);
+            }
+
+            .login-form-container {
+                padding: var(--spacing-xl);
             }
         }
     </style>

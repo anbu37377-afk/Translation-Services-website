@@ -1,10 +1,48 @@
 /* ===== BRAND IDENTITY ===== */
-html,
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* Dark Theme Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #0D1117;
+  border-left: 1px solid #30363D;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #30363D;
+  border-color: #0D1117;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #484F58;
 }
 
 :root {
@@ -1214,7 +1252,7 @@ button {
   min-width: 120px;
   height: 42px;
   /* Fixed height for all buttons */
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   margin: 0;
   /* Remove default margin */
@@ -1345,9 +1383,12 @@ section .btn,
   padding: 1.125rem 2.25rem;
   font-size: var(--font-size-base);
   min-height: 56px;
+  height: auto;
   min-width: 180px;
   max-width: fit-content;
-  /* Allow button to grow with text */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-small {
@@ -1423,9 +1464,11 @@ section:not(.support-cta):not(.cta) .btn,
 
 .hero-actions .btn {
   margin: 0;
-  display: flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  height: auto;
+  min-height: 56px;
 }
 
 /* Section Button Rules */
@@ -1813,7 +1856,9 @@ section.cta .section-subtitle {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
@@ -1822,6 +1867,7 @@ section.cta .section-subtitle {
   line-height: 1.2;
   color: var(--gray-900);
   margin-bottom: var(--spacing-xl);
+  text-align: center;
 }
 
 .hero-subtitle {
@@ -1829,6 +1875,11 @@ section.cta .section-subtitle {
   color: var(--gray-600);
   margin-bottom: var(--spacing-2xl);
   line-height: 1.6;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  /* Improve readability */
 }
 
 .hero-actions {
@@ -2152,6 +2203,15 @@ section.cta .section-subtitle {
   opacity: 0.9;
 }
 
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .cta-actions {
   display: flex;
   gap: var(--spacing-lg);
@@ -2164,7 +2224,11 @@ section.cta .section-subtitle {
 
 .cta-actions .btn {
   white-space: nowrap;
-  /* Prevent text wrapping */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 56px;
 }
 
 .medical-content .btn {
@@ -2172,6 +2236,9 @@ section.cta .section-subtitle {
   min-width: auto;
   padding-left: var(--spacing-xl);
   padding-right: var(--spacing-xl);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta .btn-outline {
@@ -2690,6 +2757,7 @@ select {
   background: var(--gray-900);
   color: var(--white);
   padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+  overflow: hidden;
 }
 
 /* Small Mobile (320px and up) */
@@ -2774,6 +2842,13 @@ select {
 .legal-features {
   text-align: left;
   margin: var(--spacing-lg) 0;
+}
+
+/* Fix for button alignment in legal section */
+.legal-content .btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .legal-stats-center {
@@ -2929,6 +3004,7 @@ select {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
+  justify-content: center;
 }
 
 .legal-card {
@@ -4084,7 +4160,8 @@ select {
 .pricing-badge {
   position: absolute;
   top: var(--spacing-lg);
-  right: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--accent-color);
   color: var(--white);
   padding: var(--spacing-xs) var(--spacing-md);
@@ -4181,6 +4258,9 @@ select {
   padding: var(--spacing-lg) var(--spacing-xl);
   font-size: 1.125rem;
   font-weight: var(--font-weight-semibold);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Enhanced Comparison Section */
@@ -4733,6 +4813,8 @@ select {
   z-index: 1000;
   display: none;
   margin-top: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .filter-menu.show {
@@ -4825,11 +4907,13 @@ select {
   display: flex;
   flex-direction: column;
   flex: 1;
+  text-align: center;
 }
 
 .blog-meta {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   font-size: 0.875rem;
@@ -4872,6 +4956,7 @@ select {
   flex-wrap: wrap;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
+  justify-content: center;
 }
 
 .tag {
@@ -5111,14 +5196,32 @@ select {
 
 [data-theme="dark"] .pagination-btn {
   background: var(--gray-100);
-  border-color: var(--gray-400);
-  color: var(--gray-700);
+  border-color: var(--gray-300);
+  color: var(--gray-900);
+}
+
+[data-theme="dark"] .pagination-btn:hover:not(:disabled) {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: var(--gray-200);
 }
 
 [data-theme="dark"] .pagination-number {
   background: var(--gray-100);
-  border-color: var(--gray-400);
-  color: var(--gray-700);
+  border-color: var(--gray-300);
+  color: var(--gray-900);
+}
+
+[data-theme="dark"] .pagination-number:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: var(--gray-200);
+}
+
+[data-theme="dark"] .pagination-number.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--white);
 }
 
 /* Mobile responsive for blog sections */
