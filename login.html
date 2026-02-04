@@ -147,7 +147,7 @@
             gap: var(--spacing-sm);
             font-weight: var(--font-weight-bold);
             font-size: 1.5rem;
-            color: var(--white);
+            color: var(--primary-color);
             text-decoration: none;
             transition: all var(--transition-normal);
             position: relative;
@@ -155,15 +155,22 @@
             cursor: pointer;
             width: 100%;
             padding: var(--spacing-md) 0;
-            pointer-events: auto;
+            pointer-events: auto !important;
+            user-select: none;
+        }
+
+        .login-brand .logo i,
+        .login-brand .logo span {
+            pointer-events: auto !important;
+            cursor: pointer;
         }
 
         [data-theme="dark"] .login-brand .logo {
-            color: var(--white);
+            color: var(--primary-color);
         }
 
         [data-theme="dark"] .login-brand .logo span {
-            color: var(--white) !important;
+            color: var(--primary-color) !important;
         }
 
         .login-brand .logo:hover {
@@ -710,6 +717,39 @@
                 console.log('Facebook login initiated');
                 // In a real implementation, this would redirect to Facebook OAuth
             });
+
+            // Debug logo click
+            const logoLink = document.querySelector('.login-brand .logo');
+            if (logoLink) {
+                logoLink.addEventListener('click', function (e) {
+                    console.log('Logo clicked! Redirecting to:', this.href);
+                    // Force navigation to home page
+                    window.location.href = 'index.html';
+                    e.preventDefault();
+                });
+                
+                // Also add click listener to icon and span separately
+                const logoIcon = logoLink.querySelector('i');
+                const logoText = logoLink.querySelector('span');
+                
+                if (logoIcon) {
+                    logoIcon.addEventListener('click', function (e) {
+                        console.log('Logo icon clicked!');
+                        window.location.href = 'index.html';
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                }
+                
+                if (logoText) {
+                    logoText.addEventListener('click', function (e) {
+                        console.log('Logo text clicked!');
+                        window.location.href = 'index.html';
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                }
+            }
         });
 
         function validateLoginForm() {

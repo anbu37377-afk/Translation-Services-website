@@ -179,19 +179,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links only (not regular navigation links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        // Only apply smooth scrolling to actual anchor links, not navigation links
+        if (anchor.getAttribute('href').startsWith('#') && anchor.getAttribute('href') !== '#') {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
     });
 
     // Handle window resize for mobile menu
