@@ -1,0 +1,45 @@
+# GitHub Pages Configuration
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Site settings
+title: LinguaFlow - Translation Services
+description: Professional translation services for businesses and individuals
+baseurl: ""
+url: "https://anbu37377-afk.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from processing
+exclude:
+  - .git/
+  - .gitignore
+  - .vscode/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Include files
+include:
+  - _pages
+  - _posts
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
