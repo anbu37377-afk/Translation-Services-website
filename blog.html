@@ -8,6 +8,9 @@
     <meta name="description"
         content="Translation industry insights, tips, and best practices. Expert articles on translation services, localization, and global communication strategies.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -421,13 +424,17 @@
             const dateMenu = document.getElementById('dateMenu');
 
             // Category filter toggle
-            categoryFilter.addEventListener('click', () => {
+            categoryFilter.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 categoryMenu.style.display = categoryMenu.style.display === 'block' ? 'none' : 'block';
                 dateMenu.style.display = 'none';
             });
 
             // Date filter toggle
-            dateFilter.addEventListener('click', () => {
+            dateFilter.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 dateMenu.style.display = dateMenu.style.display === 'block' ? 'none' : 'block';
                 categoryMenu.style.display = 'none';
             });

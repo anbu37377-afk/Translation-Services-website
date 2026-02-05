@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Maintenance | LinguaFlow</title>
-    <meta name="description" content="LinguaFlow is currently under maintenance. We'll be back soon with improved translation services.">
-    
+    <meta name="description"
+        content="LinguaFlow is currently under maintenance. We'll be back soon with improved translation services.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
+
 <body>
     <!-- Maintenance Container -->
     <div class="maintenance-container">
@@ -28,13 +35,13 @@
                     <i class="fas fa-tools"></i>
                 </div>
             </div>
-            
+
             <h1 class="maintenance-title fade-in">We're Under Maintenance</h1>
             <p class="maintenance-message fade-in-delay">
-                LinguaFlow is currently undergoing scheduled maintenance to improve our translation services. 
+                LinguaFlow is currently undergoing scheduled maintenance to improve our translation services.
                 We're working hard to bring you an even better experience.
             </p>
-            
+
             <div class="countdown-container fade-in-delay-2">
                 <div class="countdown">
                     <div class="countdown-number" id="days">00</div>
@@ -53,7 +60,7 @@
                     <span class="countdown-label">Seconds</span>
                 </div>
             </div>
-            
+
             <div class="maintenance-details fade-in-delay-3">
                 <div class="maintenance-info">
                     <h3>What's happening?</h3>
@@ -65,14 +72,14 @@
                         <li><i class="fas fa-globe"></i> Expanded language support</li>
                     </ul>
                 </div>
-                
+
                 <div class="maintenance-info">
                     <h3>Expected completion:</h3>
                     <p>We expect to be back online in approximately <strong>2 hours</strong>.</p>
                     <p>All translation projects will be processed as normal once we're back online.</p>
                 </div>
             </div>
-            
+
             <div class="maintenance-actions fade-in-delay-4">
                 <button class="btn btn-primary btn-large" onclick="notifyMe()">
                     <i class="fas fa-bell"></i>
@@ -83,7 +90,7 @@
                     Contact Support
                 </a>
             </div>
-            
+
             <div class="social-links fade-in-delay-5">
                 <h3>Stay Connected</h3>
                 <div class="social-icons">
@@ -102,7 +109,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Background Elements -->
         <div class="maintenance-background">
             <div class="bg-shape bg-shape-1"></div>
@@ -250,7 +257,7 @@
             color: var(--gray-600);
         }
 
-        [data-theme="dark] .maintenance-info li {
+        [data-theme="dark"] .maintenance-info li {
             color: var(--gray-400);
         }
 
@@ -373,19 +380,25 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-30px) rotate(180deg);
             }
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
                 transform: scale(1);
             }
+
             50% {
                 opacity: 0.8;
                 transform: scale(1.05);
@@ -423,43 +436,44 @@
 
     <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set target date (2 hours from now)
             const targetDate = new Date().getTime() + (2 * 60 * 60 * 1000);
-            
+
             // Update countdown every second
-            const countdownInterval = setInterval(function() {
+            const countdownInterval = setInterval(function () {
                 const now = new Date().getTime();
                 const distance = targetDate - now;
-                
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 document.getElementById('days').textContent = String(days).padStart(2, '0');
                 document.getElementById('hours').textContent = String(hours).padStart(2, '0');
                 document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
                 document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-                
+
                 // When countdown reaches zero
                 if (distance < 0) {
                     clearInterval(countdownInterval);
-                    document.querySelector('.countdown-container').innerHTML = 
+                    document.querySelector('.countdown-container').innerHTML =
                         '<div class="completion-message"><i class="fas fa-check-circle"></i><h2>We\'re Back Online!</h2><p>The maintenance is complete. Refresh to continue.</p></div>';
                     document.querySelector('.maintenance-title').textContent = 'We\'re Back Online!';
                     document.querySelector('.maintenance-message').textContent = 'Thank you for your patience. LinguaFlow is now fully operational.';
-                    document.querySelector('.maintenance-actions').innerHTML = 
+                    document.querySelector('.maintenance-actions').innerHTML =
                         '<a href="index.html" class="btn btn-primary btn-large"><i class="fas fa-home"></i> Go to Homepage</a>';
                 }
             }, 1000);
-            
+
             // Notify me function
-            window.notifyMe = function() {
+            window.notifyMe = function () {
                 // In a real implementation, this would send a notification
                 alert('Thank you! We\'ll notify you as soon as we\'re back online.');
             };
         });
     </script>
 </body>
+
 </html>

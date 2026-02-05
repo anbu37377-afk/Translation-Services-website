@@ -8,6 +8,9 @@
     <meta name="description"
         content="Login to your LinguaFlow account. Access your translation projects, manage orders, and track your translation history.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -727,11 +730,11 @@
                     window.location.href = 'index.html';
                     e.preventDefault();
                 });
-                
+
                 // Also add click listener to icon and span separately
                 const logoIcon = logoLink.querySelector('i');
                 const logoText = logoLink.querySelector('span');
-                
+
                 if (logoIcon) {
                     logoIcon.addEventListener('click', function (e) {
                         console.log('Logo icon clicked!');
@@ -740,7 +743,7 @@
                         e.stopPropagation();
                     });
                 }
-                
+
                 if (logoText) {
                     logoText.addEventListener('click', function (e) {
                         console.log('Logo text clicked!');

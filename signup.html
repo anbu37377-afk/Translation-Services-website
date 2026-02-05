@@ -8,6 +8,9 @@
     <meta
         name="description"="Sign up for LinguaFlow translation services. Create your account to access professional translation services, manage projects, and track orders.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -854,11 +857,11 @@
                     window.location.href = 'index.html';
                     e.preventDefault();
                 });
-                
+
                 // Also add click listener to icon and span separately
                 const logoIcon = logoLink.querySelector('i');
                 const logoText = logoLink.querySelector('span');
-                
+
                 if (logoIcon) {
                     logoIcon.addEventListener('click', function (e) {
                         console.log('Logo icon clicked!');
@@ -867,7 +870,7 @@
                         e.stopPropagation();
                     });
                 }
-                
+
                 if (logoText) {
                     logoText.addEventListener('click', function (e) {
                         console.log('Logo text clicked!');
