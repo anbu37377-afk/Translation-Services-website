@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | LinguaFlow</title>
-    <meta
-        name="description"="Sign up for LinguaFlow translation services. Create your account to access professional translation services, manage projects, and track orders.">
+    <meta name="description"
+        content="Sign up for LinguaFlow translation services. Create your account to access professional translation services, manage projects, and track orders.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -17,91 +17,130 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Theme initialization to prevent flash -->
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
-
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/menu-icon.css">
 </head>
 
 <body>
-    <!-- Signup Container -->
-    <div class="signup-container">
-        <!-- Signup Form -->
-        <div class="signup-form-container scale-in">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="languages.html">Languages We Translate</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary active">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="menu-icon" id="hamburger">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>LinguaFlow</span>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-theme">
+            <span>Dark Mode</span>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Signup Section -->
+    <section class="auth-section">
+        <div class="auth-container scale-in">
             <!-- Brand Logo -->
-            <div class="signup-brand fade-in">
+            <div class="auth-brand">
                 <a href="index.html" class="logo">
                     <i class="fas fa-language"></i>
                     <span>LinguaFlow</span>
                 </a>
             </div>
-            <div class="signup-header">
-                <h1>Create Your Account</h1>
-                <p>Join LinguaFlow and start your translation journey with professional services</p>
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join LinguaFlow for professional translations</p>
             </div>
 
-            <form class="signup-form" id="signupForm">
-                <div class="form-row">
-                    <div class="form-group fade-in-delay">
-                        <label for="firstName">First Name</label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-user"></i>
-                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
-                                required>
-                        </div>
-                        <span class="error-message"></span>
+            <form class="auth-form" id="signupForm">
+                <div class="form-group fade-in-delay">
+                    <label for="fullName">Full Name</label>
+                    <div class="auth-input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
                     </div>
-                    <div class="form-group fade-in-delay">
-                        <label for="lastName">Last Name</label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-user"></i>
-                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
-                                required>
-                        </div>
-                        <span class="error-message"></span>
-                    </div>
+                    <span class="error-message"
+                        style="color: #e74c3c; font-size: 0.75rem; margin-top: 0.25rem; display: none;"></span>
                 </div>
 
                 <div class="form-group fade-in-delay-2">
                     <label for="email">Email Address</label>
-                    <div class="input-wrapper">
+                    <div class="auth-input-wrapper">
                         <i class="fas fa-envelope"></i>
                         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                     </div>
-                    <span class="error-message"></span>
+                    <span class="error-message"
+                        style="color: #e74c3c; font-size: 0.75rem; margin-top: 0.25rem; display: none;"></span>
                 </div>
 
                 <div class="form-group fade-in-delay-3">
-                    <label for="phone">Phone Number</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-phone"></i>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                    </div>
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group fade-in-delay-4">
-                    <label for="company">Company Name</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-building"></i>
-                        <input type="text" id="company" name="company" placeholder="Enter your company name (optional)">
-                    </div>
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group fade-in-delay-5">
                     <label for="password">Password</label>
-                    <div class="input-wrapper">
+                    <div class="auth-input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="password" name="password" placeholder="Create a strong password"
                             required>
@@ -109,676 +148,116 @@
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
-                    <span class="error-message"></span>
-                    <div class="password-strength">
-                        <div class="strength-bar">
-                            <div class="strength-fill" id="strengthFill"></div>
-                        </div>
-                        <span class="strength-text" id="strengthText">Password strength</span>
-                    </div>
+                    <span class="error-message"
+                        style="color: #e74c3c; font-size: 0.75rem; margin-top: 0.25rem; display: none;"></span>
                 </div>
 
-                <div class="form-group fade-in-delay-6">
+                <div class="form-group fade-in-delay-4">
                     <label for="confirmPassword">Confirm Password</label>
-                    <div class="input-wrapper">
+                    <div class="auth-input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="confirmPassword" name="confirmPassword"
                             placeholder="Confirm your password" required>
-                        <button type="button" class="toggle-password" id="toggleConfirmPassword">
-                            <i class="fas fa-eye"></i>
-                        </button>
                     </div>
-                    <span class="error-message"></span>
+                    <span class="error-message"
+                        style="color: #e74c3c; font-size: 0.75rem; margin-top: 0.25rem; display: none;"></span>
                 </div>
 
-                <div class="form-options fade-in-delay-7">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <span class="checkmark"></span>
-                        I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#"
-                            class="privacy-link">Privacy Policy</a>
+                <div class="auth-options fade-in-delay-5">
+                    <label class="checkbox-label"
+                        style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" id="terms" name="terms" style="margin-top: 0.25rem;" required>
+                        <span style="font-size: 0.85rem; line-height: 1.4;">I agree to the <a href="#"
+                                style="color: var(--accent-color);">Terms of Service</a> and <a href="#"
+                                style="color: var(--accent-color);">Privacy Policy</a></span>
                     </label>
                 </div>
 
-                <div class="form-options fade-in-delay-8">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <span class="checkmark"></span>
-                        I'd like to receive translation tips and industry insights
-                    </label>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large fade-in-delay-9">
+                <button type="submit" class="btn btn-primary auth-submit fade-in-delay-6">
                     <span class="btn-text">Create Account</span>
-                    <i class="fas fa-spinner fa-spin loading-spinner"></i>
+                    <i class="fas fa-spinner fa-spin loading-spinner" style="display: none;"></i>
                 </button>
             </form>
 
-            <!-- Social Signup -->
-            <div class="social-signup fade-in-delay-10">
-                <div class="divider">
-                    <span>Or sign up with</span>
-                </div>
-                <div class="social-buttons">
-                    <button type="button" class="btn-social google">
-                        <i class="fab fa-google"></i>
-                        <span>Google</span>
-                    </button>
-                    <button type="button" class="btn-social facebook">
-                        <i class="fab fa-facebook-f"></i>
-                        <span>Facebook</span>
-                    </button>
-                </div>
+            <div class="auth-divider fade-in-delay-7">
+                <span>Or sign up with</span>
             </div>
 
-            <!-- Login Link -->
-            <div class="login-link fade-in-delay-11">
+            <div class="social-buttons fade-in-delay-7">
+                <button type="button" class="btn-social google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="btn-social facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </button>
+            </div>
+
+            <div class="auth-footer fade-in-delay-8">
                 <p>Already have an account? <a href="login.html">Login here</a></p>
             </div>
         </div>
+    </section>
 
-        <!-- Background Elements -->
-        <div class="signup-background">
-            <div class="bg-shape bg-shape-1"></div>
-            <div class="bg-shape bg-shape-2"></div>
-            <div class="bg-shape bg-shape-3"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-language"></i>
+                        <span>LinguaFlow</span>
+                    </div>
+                    <p>Professional translation services with certified native translators, ensuring accuracy and
+                        cultural relevance for global communication.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Legal Translation</a></li>
+                        <li><a href="services.html">Medical Translation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
+                <button class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
         </div>
-    </div>
-
-    <!-- Custom Styles for Signup Page -->
-    <style>
-        /* Signup Page Specific Styles */
-        body {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: var(--spacing-2xl) var(--spacing-md);
-        }
-
-        .signup-container {
-            width: 100%;
-            max-width: 500px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .signup-brand {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .signup-brand .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--spacing-sm);
-            font-weight: var(--font-weight-bold);
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: all var(--transition-normal);
-            position: relative;
-            z-index: 100;
-            cursor: pointer;
-            width: 100%;
-            padding: var(--spacing-md) 0;
-            pointer-events: auto !important;
-            user-select: none;
-        }
-
-        .signup-brand .logo i,
-        .signup-brand .logo span {
-            pointer-events: auto !important;
-            cursor: pointer;
-        }
-
-        [data-theme="dark"] .signup-brand .logo {
-            color: var(--primary-color);
-        }
-
-        [data-theme="dark"] .signup-brand .logo span {
-            color: var(--primary-color) !important;
-        }
-
-        .signup-brand .logo:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .signup-brand .logo i {
-            color: var(--accent-color);
-            font-size: 1.75rem;
-            transition: transform var(--transition-normal);
-        }
-
-        .signup-brand .logo:hover i {
-            transform: rotate(-10deg);
-        }
-
-        .signup-form-container {
-            background: var(--white);
-            border-radius: var(--radius-2xl);
-            padding: var(--spacing-3xl);
-            box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        [data-theme="dark"] .signup-form-container {
-            background: var(--gray-50);
-            border-color: var(--gray-300);
-        }
-
-        .signup-header {
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .signup-header h1 {
-            font-size: 2rem;
-            font-weight: var(--font-weight-bold);
-            color: var(--gray-900);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .signup-header p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        .signup-form {
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .form-row {
-            display: flex;
-            gap: var(--spacing-md);
-        }
-
-        .form-row .form-group {
-            flex: 1;
-        }
-
-        .form-group {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: var(--font-weight-medium);
-            color: var(--gray-700);
-            margin-bottom: var(--spacing-sm);
-            font-size: 0.875rem;
-        }
-
-        .input-wrapper {
-            position: relative;
-        }
-
-        .input-wrapper i {
-            position: absolute;
-            left: var(--spacing-md);
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray-400);
-            font-size: 1rem;
-            z-index: 1;
-        }
-
-        .input-wrapper input {
-            width: 100%;
-            padding: var(--spacing-md) 3rem var(--spacing-md) 3rem;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            transition: all var(--transition-normal);
-            background-color: var(--white);
-            color: var(--gray-700);
-        }
-
-        [data-theme="dark"] .input-wrapper input {
-            background-color: var(--gray-100);
-            border-color: var(--gray-300);
-            color: var(--gray-700);
-        }
-
-        .input-wrapper input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.1);
-        }
-
-        .toggle-password {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: var(--gray-400);
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all var(--transition-normal);
-            z-index: 2;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .toggle-password:hover {
-            color: var(--accent-color);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .toggle-password:focus {
-            outline: none;
-            color: var(--accent-color);
-        }
-
-        .password-strength {
-            margin-top: var(--spacing-sm);
-        }
-
-        .strength-bar {
-            height: 4px;
-            background-color: var(--gray-200);
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-        }
-
-        .strength-fill {
-            height: 100%;
-            width: 0;
-            transition: all var(--transition-normal);
-            border-radius: var(--radius-sm);
-        }
-
-        .strength-text {
-            font-size: 0.75rem;
-            color: var(--gray-500);
-            margin-top: var(--spacing-xs);
-        }
-
-        .form-options {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: flex-start;
-            cursor: pointer;
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            line-height: 1.4;
-        }
-
-        .checkbox-label input[type="checkbox"] {
-            display: none;
-        }
-
-        .checkmark {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--gray-300);
-            border-radius: var(--radius-sm);
-            margin-right: var(--spacing-sm);
-            margin-top: 2px;
-            flex-shrink: 0;
-            position: relative;
-            transition: all var(--transition-normal);
-        }
-
-        .checkbox-label input[type="checkbox"]:checked+.checkmark {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-
-        .checkbox-label input[type="checkbox"]:checked+.checkmark::after {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--white);
-            font-size: 0.75rem;
-        }
-
-        .terms-link,
-        .privacy-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: var(--font-weight-medium);
-            transition: all var(--transition-normal);
-            border-bottom: 1px solid transparent;
-        }
-
-        .terms-link:hover,
-        .terms-link:focus,
-        .privacy-link:hover,
-        .privacy-link:focus {
-            color: var(--accent-dark);
-            border-bottom-color: var(--accent-dark);
-            outline: none;
-        }
-
-        .btn-large {
-            width: 100%;
-            padding: var(--spacing-lg) var(--spacing-xl);
-            font-size: 1rem;
-            min-height: 52px;
-            transition: all var(--transition-normal);
-        }
-
-        .btn-primary:hover,
-        .btn-primary:focus {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            filter: brightness(1.1);
-            outline: none;
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-
-        .loading-spinner {
-            display: none;
-        }
-
-        .btn-large.loading .btn-text {
-            display: none;
-        }
-
-        .btn-large.loading .loading-spinner {
-            display: inline-block;
-        }
-
-        .social-signup {
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .divider {
-            text-align: center;
-            position: relative;
-            margin: var(--spacing-lg) 0;
-        }
-
-        .divider::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: var(--gray-200);
-        }
-
-        .divider span {
-            background-color: var(--white);
-            padding: 0 var(--spacing-md);
-            color: var(--gray-500);
-            font-size: 0.875rem;
-            position: relative;
-        }
-
-        [data-theme="dark"] .divider span {
-            background-color: var(--gray-50);
-        }
-
-        .social-buttons {
-            display: flex;
-            gap: var(--spacing-md);
-        }
-
-        .btn-social {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            padding: var(--spacing-md);
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius-md);
-            background-color: var(--white);
-            color: var(--gray-700);
-            font-weight: var(--font-weight-medium);
-            font-size: 0.875rem;
-            transition: all var(--transition-normal);
-            cursor: pointer;
-        }
-
-        [data-theme="dark"] .btn-social {
-            background-color: var(--gray-50);
-            border-color: var(--gray-300);
-        }
-
-        .btn-social:hover,
-        .btn-social:focus {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--gray-400);
-            outline: none;
-        }
-
-        .btn-social.google:hover,
-        .btn-social.google:focus {
-            border-color: #4285f4;
-            color: #4285f4;
-            background-color: rgba(66, 133, 244, 0.05);
-        }
-
-        .btn-social.facebook:hover,
-        .btn-social.facebook:focus {
-            border-color: #1877f2;
-            color: #1877f2;
-            background-color: rgba(24, 119, 242, 0.05);
-        }
-
-        .login-link {
-            text-align: center;
-        }
-
-        .login-link p {
-            color: var(--gray-600);
-            font-size: 0.875rem;
-        }
-
-        .login-link a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: var(--font-weight-medium);
-            transition: all var(--transition-normal);
-            border-bottom: 1px solid transparent;
-        }
-
-        .login-link a:hover,
-        .login-link a:focus {
-            color: var(--accent-dark);
-            border-bottom-color: var(--accent-dark);
-            outline: none;
-        }
-
-        .signup-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .bg-shape {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .bg-shape-1 {
-            width: 300px;
-            height: 300px;
-            top: -150px;
-            left: -150px;
-            animation-delay: 0s;
-        }
-
-        .bg-shape-2 {
-            width: 200px;
-            height: 200px;
-            bottom: -100px;
-            right: -100px;
-            animation-delay: 2s;
-        }
-
-        .bg-shape-3 {
-            width: 150px;
-            height: 150px;
-            top: 50%;
-            left: 50%;
-            animation-delay: 4s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
-        }
-
-        .error-message {
-            display: block;
-            color: #e74c3c;
-            font-size: 0.75rem;
-            margin-top: var(--spacing-xs);
-            display: none;
-        }
-
-        .form-group.error input {
-            border-color: #e74c3c;
-        }
-
-        .form-group.error .error-message {
-            display: block;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: var(--spacing-lg) var(--spacing-md);
-            }
-
-            .signup-container {
-                max-width: 100%;
-            }
-
-            .signup-form-container {
-                padding: var(--spacing-2xl) var(--spacing-lg);
-                border-radius: var(--radius-xl);
-            }
-
-            .signup-brand .logo {
-                font-size: 1.35rem;
-            }
-
-            .signup-brand .logo i {
-                font-size: 1.5rem;
-            }
-
-            .signup-header h1 {
-                font-size: 1.75rem;
-            }
-
-            .signup-header p {
-                font-size: 0.9rem;
-            }
-
-            .input-wrapper input {
-                padding: var(--spacing-md) 2.75rem var(--spacing-md) 2.75rem;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 520px) {
-            body {
-                padding: var(--spacing-md);
-            }
-
-            .signup-container {
-                max-width: 100%;
-            }
-
-            .signup-form-container {
-                padding: var(--spacing-xl) var(--spacing-md);
-                border-radius: var(--radius-lg);
-            }
-
-            .signup-brand .logo {
-                font-size: 1.25rem;
-            }
-
-            .signup-brand .logo i {
-                font-size: 1.35rem;
-            }
-
-            .signup-header h1 {
-                font-size: 1.5rem;
-            }
-
-            .signup-header p {
-                font-size: 0.85rem;
-            }
-
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-
-            .social-buttons {
-                flex-direction: column;
-                gap: var(--spacing-sm);
-            }
-
-            .checkbox-label {
-                font-size: 0.8rem;
-            }
-
-            .input-wrapper input {
-                padding: var(--spacing-sm) 2.5rem var(--spacing-sm) 2.5rem;
-                font-size: 0.9rem;
-            }
-
-            .btn-large {
-                padding: var(--spacing-md) var(--spacing-lg);
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-height: 800px) {
-            body {
-                padding: var(--spacing-md);
-                justify-content: center;
-            }
-
-            .signup-brand {
-                margin-bottom: var(--spacing-md);
-            }
-
-            .signup-form-container {
-                padding: var(--spacing-xl);
-            }
-        }
-    </style>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
@@ -786,223 +265,111 @@
         document.addEventListener('DOMContentLoaded', function () {
             const signupForm = document.getElementById('signupForm');
             const togglePassword = document.getElementById('togglePassword');
-            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
             const passwordInput = document.getElementById('password');
-            const confirmPasswordInput = document.getElementById('confirmPassword');
-            const strengthFill = document.getElementById('strengthFill');
-            const strengthText = document.getElementById('strengthText');
 
             // Toggle password visibility
-            togglePassword.addEventListener('click', function () {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', function () {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
 
-                const icon = this.querySelector('i');
-                icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
-            });
-
-            toggleConfirmPassword.addEventListener('click', function () {
-                const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                confirmPasswordInput.setAttribute('type', type);
-
-                const icon = this.querySelector('i');
-                icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
-            });
-
-            // Password strength checker
-            passwordInput.addEventListener('input', function () {
-                const password = this.value;
-                const strength = checkPasswordStrength(password);
-
-                strengthFill.style.width = strength.percentage + '%';
-                strengthFill.style.backgroundColor = strength.color;
-                strengthText.textContent = strength.text;
-            });
+                    const icon = this.querySelector('i');
+                    icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+                });
+            }
 
             // Form validation and submission
-            signupForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                if (validateSignupForm()) {
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    submitBtn.classList.add('loading');
-
-                    // Simulate signup process
-                    setTimeout(() => {
-                        // Redirect to login or dashboard
-                        window.location.href = 'login.html';
-                    }, 2000);
-                }
-            });
-
-            // Social signup handlers
-            document.querySelector('.btn-social.google').addEventListener('click', function () {
-                // Simulate Google signup
-                console.log('Google signup initiated');
-                // In a real implementation, this would redirect to Google OAuth
-            });
-
-            document.querySelector('.btn-social.facebook').addEventListener('click', function () {
-                // Simulate Facebook signup
-                console.log('Facebook signup initiated');
-                // In a real implementation, this would redirect to Facebook OAuth
-            });
-
-            // Debug logo click
-            const logoLink = document.querySelector('.signup-brand .logo');
-            if (logoLink) {
-                logoLink.addEventListener('click', function (e) {
-                    console.log('Logo clicked! Redirecting to:', this.href);
-                    // Force navigation to home page
-                    window.location.href = 'index.html';
+            if (signupForm) {
+                signupForm.addEventListener('submit', function (e) {
                     e.preventDefault();
+
+                    if (validateSignupForm()) {
+                        const submitBtn = this.querySelector('button[type="submit"]');
+                        const btnText = submitBtn.querySelector('.btn-text');
+                        const spinner = submitBtn.querySelector('.loading-spinner');
+
+                        if (btnText) btnText.style.display = 'none';
+                        if (spinner) spinner.style.display = 'inline-block';
+                        submitBtn.disabled = true;
+
+                        // Simulate signup process
+                        setTimeout(() => {
+                            // Redirect to dashboard or home page
+                            window.location.href = 'index.html';
+                        }, 2000);
+                    }
                 });
+            }
 
-                // Also add click listener to icon and span separately
-                const logoIcon = logoLink.querySelector('i');
-                const logoText = logoLink.querySelector('span');
+            function validateSignupForm() {
+                const fullName = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                const password = document.getElementById('password');
+                const confirmPassword = document.getElementById('confirmPassword');
+                const terms = document.getElementById('terms');
+                let isValid = true;
 
-                if (logoIcon) {
-                    logoIcon.addEventListener('click', function (e) {
-                        console.log('Logo icon clicked!');
-                        window.location.href = 'index.html';
-                        e.preventDefault();
-                        e.stopPropagation();
-                    });
+                // Reset error states
+                document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('input').forEach(el => el.style.borderColor = 'var(--gray-200)');
+
+                // Validate fullName
+                if (!fullName.value.trim()) {
+                    showError(fullName, 'Full name is required');
+                    isValid = false;
                 }
 
-                if (logoText) {
-                    logoText.addEventListener('click', function (e) {
-                        console.log('Logo text clicked!');
-                        window.location.href = 'index.html';
-                        e.preventDefault();
-                        e.stopPropagation();
-                    });
+                // Validate email
+                if (!email.value.trim()) {
+                    showError(email, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(email.value)) {
+                    showError(email, 'Please enter a valid email address');
+                    isValid = false;
                 }
+
+                // Validate password
+                if (!password.value.trim()) {
+                    showError(password, 'Password is required');
+                    isValid = false;
+                } else if (password.value.length < 6) {
+                    showError(password, 'Password must be at least 6 characters');
+                    isValid = false;
+                }
+
+                // Validate confirm password
+                if (password.value !== confirmPassword.value) {
+                    showError(confirmPassword, 'Passwords do not match');
+                    isValid = false;
+                }
+
+                // Validate terms
+                if (!terms.checked) {
+                    const termsContainer = terms.closest('.auth-options');
+                    // Just shake or highlight terms
+                    // Simplified error showing for terms
+                    isValid = false;
+                    alert('Please agree to the Terms of Service and Privacy Policy');
+                }
+
+                return isValid;
+            }
+
+            function showError(input, message) {
+                const formGroup = input.closest('.form-group');
+                const errorMessage = formGroup.querySelector('.error-message');
+                input.style.borderColor = '#e74c3c';
+                if (errorMessage) {
+                    errorMessage.textContent = message;
+                    errorMessage.style.display = 'block';
+                }
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
             }
         });
-
-        function validateSignupForm() {
-            const firstName = document.getElementById('firstName');
-            const lastName = document.getElementById('lastName');
-            const email = document.getElementById('email');
-            const phone = document.getElementById('phone');
-            const password = document.getElementById('password');
-            const confirmPassword = document.getElementById('confirmPassword');
-            const terms = document.getElementById('terms');
-            let isValid = true;
-
-            // Reset error states
-            document.querySelectorAll('.form-group').forEach(group => {
-                group.classList.remove('error');
-            });
-
-            // Validate first name
-            if (!firstName.value.trim()) {
-                showError(firstName, 'First name is required');
-                isValid = false;
-            }
-
-            // Validate last name
-            if (!lastName.value.trim()) {
-                showError(lastName, 'Last name is required');
-                isValid = false;
-            }
-
-            // Validate email
-            if (!email.value.trim()) {
-                showError(email, 'Email is required');
-                isValid = false;
-            } else if (!isValidEmail(email.value)) {
-                showError(email, 'Please enter a valid email address');
-                isValid = false;
-            }
-
-            // Validate phone (optional but if provided, must be valid)
-            if (phone.value.trim() && !isValidPhone(phone.value)) {
-                showError(phone, 'Please enter a valid phone number');
-                isValid = false;
-            }
-
-            // Validate password
-            if (!password.value.trim()) {
-                showError(password, 'Password is required');
-                isValid = false;
-            } else if (password.value.length < 8) {
-                showError(password, 'Password must be at least 8 characters');
-                isValid = false;
-            }
-
-            // Validate confirm password
-            if (!confirmPassword.value.trim()) {
-                showError(confirmPassword, 'Please confirm your password');
-                isValid = false;
-            } else if (password.value !== confirmPassword.value) {
-                showError(confirmPassword, 'Passwords do not match');
-                isValid = false;
-            }
-
-            // Validate terms acceptance
-            if (!terms.checked) {
-                const termsGroup = terms.closest('.form-group');
-                termsGroup.classList.add('error');
-                const errorMessage = termsGroup.querySelector('.error-message');
-                errorMessage.textContent = 'You must accept the terms and conditions';
-                errorMessage.style.display = 'block';
-                isValid = false;
-            }
-
-            return isValid;
-        }
-
-        function showError(input, message) {
-            const formGroup = input.closest('.form-group');
-            formGroup.classList.add('error');
-            const errorMessage = formGroup.querySelector('.error-message');
-            errorMessage.textContent = message;
-        }
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        function isValidPhone(phone) {
-            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-            return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 10;
-        }
-
-        function checkPasswordStrength(password) {
-            let strength = 0;
-            let color = '#e74c3c';
-            let text = 'Very Weak';
-
-            if (password.length >= 8) strength += 25;
-            if (password.length >= 12) strength += 25;
-            if (/[a-z]/.test(password)) strength += 15;
-            if (/[A-Z]/.test(password)) strength += 15;
-            if (/[0-9]/.test(password)) strength += 10;
-            if (/[^a-zA-Z0-9]/.test(password)) strength += 10;
-
-            if (strength < 30) {
-                color = '#e74c3c';
-                text = 'Very Weak';
-            } else if (strength < 50) {
-                color = '#f39c12';
-                text = 'Weak';
-            } else if (strength < 70) {
-                color = '#f1c40f';
-                text = 'Fair';
-            } else if (strength < 85) {
-                color = '#2ecc71';
-                text = 'Good';
-            } else {
-                color = '#27ae60';
-                text = 'Strong';
-            }
-
-            return { percentage: strength, color: color, text: text };
-        }
     </script>
 </body>
 

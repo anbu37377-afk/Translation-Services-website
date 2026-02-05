@@ -131,36 +131,30 @@
                 </div>
 
                 <div class="filter-section">
-                    <div class="filter-dropdown">
-                        <button class="filter-btn" id="categoryFilter">
-                            <i class="fas fa-folder"></i>
-                            <span>All Categories</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="filter-menu" id="categoryMenu">
-                            <a href="#" data-category="all">All Categories</a>
-                            <a href="#" data-category="translation">Translation Tips</a>
-                            <a href="#" data-category="localization">Localization</a>
-                            <a href="#" data-category="legal">Legal Translation</a>
-                            <a href="#" data-category="technology">Translation Technology</a>
-                            <a href="#" data-category="business">Global Business</a>
-                            <a href="#" data-category="industry">Industry Insights</a>
-                        </div>
+                    <div class="custom-select-container">
+                        <i class="fas fa-folder select-icon"></i>
+                        <select id="categorySelect" class="custom-select">
+                            <option value="all">All Categories</option>
+                            <option value="translation">Translation Tips</option>
+                            <option value="localization">Localization</option>
+                            <option value="legal">Legal Translation</option>
+                            <option value="technology">Translation Technology</option>
+                            <option value="business">Global Business</option>
+                            <option value="industry">Industry Insights</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
                     </div>
 
-                    <div class="filter-dropdown">
-                        <button class="filter-btn" id="dateFilter">
-                            <i class="fas fa-calendar"></i>
-                            <span>All Dates</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="filter-menu" id="dateMenu">
-                            <a href="#" data-date="all">All Dates</a>
-                            <a href="#" data-date="today">Today</a>
-                            <a href="#" data-date="week">This Week</a>
-                            <a href="#" data-date="month">This Month</a>
-                            <a href="#" data-date="year">This Year</a>
-                        </div>
+                    <div class="custom-select-container">
+                        <i class="fas fa-calendar select-icon"></i>
+                        <select id="dateSelect" class="custom-select">
+                            <option value="all">All Dates</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
                     </div>
                 </div>
             </div>
@@ -416,86 +410,50 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
-        // Filter dropdown functionality
+        // Filter functionality using Select elements
         document.addEventListener('DOMContentLoaded', function () {
-            const categoryFilter = document.getElementById('categoryFilter');
-            const categoryMenu = document.getElementById('categoryMenu');
-            const dateFilter = document.getElementById('dateFilter');
-            const dateMenu = document.getElementById('dateMenu');
-
-            // Category filter toggle
-            categoryFilter.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                categoryMenu.style.display = categoryMenu.style.display === 'block' ? 'none' : 'block';
-                dateMenu.style.display = 'none';
-            });
-
-            // Date filter toggle
-            dateFilter.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                dateMenu.style.display = dateMenu.style.display === 'block' ? 'none' : 'block';
-                categoryMenu.style.display = 'none';
-            });
+            const categorySelect = document.getElementById('categorySelect');
+            const dateSelect = document.getElementById('dateSelect');
 
             // Category selection
-            document.querySelectorAll('#categoryMenu a').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const category = link.dataset.category;
-                    const text = link.textContent;
-                    categoryFilter.querySelector('span').textContent = text;
-                    categoryMenu.style.display = 'none';
-
+            if (categorySelect) {
+                categorySelect.addEventListener('change', (e) => {
+                    const category = e.target.value;
                     // Filter blog posts (placeholder functionality)
                     filterBlogPosts('category', category);
                 });
-            });
+            }
 
             // Date selection
-            document.querySelectorAll('#dateMenu a').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const date = link.dataset.date;
-                    const text = link.textContent;
-                    dateFilter.querySelector('span').textContent = text;
-                    dateMenu.style.display = 'none';
-
+            if (dateSelect) {
+                dateSelect.addEventListener('change', (e) => {
+                    const date = e.target.value;
                     // Filter blog posts (placeholder functionality)
                     filterBlogPosts('date', date);
                 });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!categoryFilter.contains(e.target) && !categoryMenu.contains(e.target)) {
-                    categoryMenu.style.display = 'none';
-                }
-                if (!dateFilter.contains(e.target) && !dateMenu.contains(e.target)) {
-                    dateMenu.style.display = 'none';
-                }
-            });
+            }
 
             // Search functionality
             const searchInput = document.getElementById('searchInput');
             const searchBtn = searchInput.nextElementSibling;
 
-            searchBtn.addEventListener('click', () => {
-                const query = searchInput.value.trim();
-                if (query) {
-                    performSearch(query);
-                }
-            });
-
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
+            if (searchBtn && searchInput) {
+                searchBtn.addEventListener('click', () => {
                     const query = searchInput.value.trim();
                     if (query) {
                         performSearch(query);
                     }
-                }
-            });
+                });
+
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const query = searchInput.value.trim();
+                        if (query) {
+                            performSearch(query);
+                        }
+                    }
+                });
+            }
         });
 
         function filterBlogPosts(type, value) {
