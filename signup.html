@@ -144,9 +144,6 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" id="password" name="password" placeholder="Create a strong password"
                             required>
-                        <button type="button" class="toggle-password" id="togglePassword">
-                            <i class="fas fa-eye"></i>
-                        </button>
                     </div>
                     <span class="error-message"
                         style="color: #e74c3c; font-size: 0.75rem; margin-top: 0.25rem; display: none;"></span>
@@ -167,9 +164,8 @@
                     <label class="checkbox-label"
                         style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
                         <input type="checkbox" id="terms" name="terms" style="margin-top: 0.25rem;" required>
-                        <span style="font-size: 0.85rem; line-height: 1.4;">I agree to the <a href="#"
-                                style="color: var(--accent-color);">Terms of Service</a> and <a href="#"
-                                style="color: var(--accent-color);">Privacy Policy</a></span>
+                        <span style="font-size: 0.85rem; line-height: 1.4;">I agree to the <a href="#">Terms of
+                                Service</a> and <a href="#">Privacy Policy</a></span>
                     </label>
                 </div>
 
@@ -200,83 +196,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <i class="fas fa-language"></i>
-                        <span>LinguaFlow</span>
-                    </div>
-                    <p>Professional translation services with certified native translators, ensuring accuracy and
-                        cultural relevance for global communication.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Document Translation</a></li>
-                        <li><a href="services.html">Website Localization</a></li>
-                        <li><a href="services.html">Legal Translation</a></li>
-                        <li><a href="services.html">Medical Translation</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="help.html">Help Center</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 LinguaFlow. All rights reserved.</p>
-                <button class="back-to-top" id="backToTop">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-            </div>
-        </div>
-    </footer>
+    
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const signupForm = document.getElementById('signupForm');
-            const togglePassword = document.getElementById('togglePassword');
-            const passwordInput = document.getElementById('password');
 
-            // Toggle password visibility
-            if (togglePassword && passwordInput) {
-                togglePassword.addEventListener('click', function () {
-                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                    passwordInput.setAttribute('type', type);
-
-                    const icon = this.querySelector('i');
-                    icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
-                });
-            }
 
             // Form validation and submission
             if (signupForm) {
