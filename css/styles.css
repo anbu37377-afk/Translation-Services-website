@@ -8,15 +8,178 @@
 html {
   height: 100%;
   overflow-x: hidden;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100vw;
   min-height: 100%;
   height: auto;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== MOBILE LAYOUT FOR 360×800 VIEWPORT ===== */
+/* Clean, simple mobile layout - keeps desktop unchanged */
+@media screen and (max-width: 800px) {
+
+  /* Viewport Lock */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hero Section - Single Column Layout */
+  .hero {
+    width: 100%;
+    padding: 100px 20px 40px 20px;
+    overflow: hidden;
+  }
+
+  .hero .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 200px;
+    text-align: center;
+  }
+
+  .hero-media {
+    width: 100%;
+    order: 1;
+  }
+
+  .hero-image {
+    width: 100%;
+    transform: none;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* General Sections */
+  section {
+    width: 100%;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Section Headers */
+  .section-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Grids - Single Column */
+  .category-grid,
+  .featured-grid,
+  .service-grid,
+  .feature-grid,
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* Cards */
+  .category-card,
+  .featured-card,
+  .service-card,
+  .feature-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Custom Scrollbar */
@@ -971,6 +1134,10 @@ button {
   visibility: visible !important;
 }
 
+.mobile-brand-center {
+  color: var(--gray-900);
+}
+
 [data-theme="dark"] .mobile-brand-center {
   color: #FFFFFF;
 }
@@ -1853,10 +2020,12 @@ section.cta .section-subtitle {
   section.hero {
     padding-top: calc(var(--nav-height) + var(--spacing-xl));
     padding-bottom: var(--spacing-xl);
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     border-radius: 0;
+    width: 100%;
+    max-width: 100vw;
   }
 
   section.cta {
@@ -2524,6 +2693,131 @@ img {
     font-size: var(--font-size-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
   }
+
+  /* Hero Section Mobile Fix (360-768px) */
+  .hero {
+    padding-top: calc(var(--nav-height) + var(--spacing-lg));
+    padding-bottom: var(--spacing-xl);
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .hero .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    text-align: center;
+    max-width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    padding: 0 var(--spacing-md);
+    box-sizing: border-box;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .hero-media {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 var(--spacing-md);
+    box-sizing: border-box;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+}
+
+/* Hero Section Fix for viewports 768-800px */
+@media (min-width: 769px) and (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 var(--spacing-md);
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .hero-media {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    max-width: 500px;
+    margin: 0 auto;
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2577,9 +2871,16 @@ img {
   }
 
   section.hero {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .hero .container {
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
-    overflow-x: hidden;
   }
 
   .hero-grid {
@@ -7383,7 +7684,7 @@ select {
 }
 
 .auth-brand .logo span {
-  color: var(--primary-color);
+  color: var(--gray-900);
 }
 
 .auth-brand .logo:hover {
