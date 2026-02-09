@@ -1,13 +1,11 @@
 # GitHub Pages Configuration
-theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
 # Site settings
 title: LinguaFlow - Translation Services
 description: Professional translation services for businesses and individuals
-baseurl: ""
+baseurl: "/Translation-Services-website"
 url: "https://anbu37377-afk.github.io"
 
 # Build settings
@@ -27,6 +25,7 @@ exclude:
 
 # Include files
 include:
+  - .htaccess
   - _pages
   - _posts
 
