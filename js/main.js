@@ -247,3 +247,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// Search Tags Functionality for Blog Page
+document.addEventListener('DOMContentLoaded', function () {
+    const searchTags = document.querySelectorAll('.search-tag');
+
+    if (searchTags.length > 0) {
+        searchTags.forEach(tag => {
+            tag.addEventListener('click', function () {
+                // Update active state
+                searchTags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                // Filter blog posts
+                const value = this.getAttribute('data-value');
+                if (typeof filterBlogPosts === 'function') {
+                    filterBlogPosts('category', value);
+                }
+            });
+        });
+    }
+});

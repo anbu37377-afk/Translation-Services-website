@@ -2309,9 +2309,10 @@ section.cta .section-subtitle {
 
 /* ===== FOOTER ===== */
 .footer {
-  background-color: var(--primary-color);
-  color: var(--gray-300);
+  background-color: var(--white);
+  color: var(--gray-600);
   padding: var(--spacing-2xl) 0 var(--spacing-lg);
+  border-top: 1px solid var(--gray-200);
 }
 
 .footer-brand .logo {
@@ -2320,12 +2321,12 @@ section.cta .section-subtitle {
   gap: var(--spacing-sm);
   font-weight: var(--font-weight-bold);
   font-size: 1.25rem;
-  color: #ffffff;
+  color: var(--gray-900);
   margin-bottom: var(--spacing-md);
 }
 
 .footer-brand .logo span {
-  color: #ffffff;
+  color: var(--gray-900);
 }
 
 .footer-brand .logo i {
@@ -2336,6 +2337,7 @@ section.cta .section-subtitle {
 .footer-brand p {
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
+  color: var(--gray-600);
 }
 
 .social-links {
@@ -2346,12 +2348,12 @@ section.cta .section-subtitle {
 .social-links a {
   width: 40px;
   height: 40px;
-  background-color: var(--gray-800);
+  background-color: var(--gray-100);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-400);
+  color: var(--gray-600);
   transition: all var(--transition-normal);
 }
 
@@ -2369,7 +2371,7 @@ section.cta .section-subtitle {
 }
 
 .footer-section h4 {
-  color: var(--white);
+  color: var(--gray-900);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--spacing-lg);
 }
@@ -2379,7 +2381,7 @@ section.cta .section-subtitle {
 }
 
 .footer-section ul li a {
-  color: var(--gray-400);
+  color: var(--gray-600);
   transition: color var(--transition-fast);
 }
 
@@ -2904,14 +2906,6 @@ select {
   .hero-subtitle {
     font-size: var(--font-size-base);
   }
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: var(--gray-900);
-  color: var(--white);
-  padding: var(--spacing-3xl) 0 var(--spacing-2xl);
-  overflow: hidden;
 }
 
 /* Small Mobile (320px and up) */
@@ -4769,6 +4763,7 @@ select {
 
   .pricing-card.recommended {
     transform: none;
+    padding-top: var(--spacing-3xl);
   }
 
   .pricing-header h3 {
@@ -4820,6 +4815,10 @@ select {
 
   .pricing-card {
     padding: var(--spacing-xl);
+  }
+
+  .pricing-card.recommended {
+    padding-top: var(--spacing-3xl);
   }
 
   .amount {
@@ -4878,12 +4877,12 @@ select {
   border: 2px solid var(--gray-200);
   border-radius: var(--radius-lg);
   padding: 0 var(--spacing-lg);
-  /* Changed padding */
   transition: all var(--transition-normal);
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   height: 56px;
-  /* Fixed height */
+  box-sizing: border-box;
 }
 
 .search-input-wrapper:focus-within {
@@ -4931,75 +4930,64 @@ select {
 }
 
 
-.filter-section {
+/* ===== SEARCH TAGS ===== */
+.search-tags-container {
   display: flex;
-  gap: var(--spacing-lg);
+  align-items: center;
   justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
   flex-wrap: wrap;
-  width: 100%;
 }
 
-.custom-select-container {
-  position: relative;
-  width: 250px;
-  max-width: 100%;
+.tags-label {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-500);
 }
 
-.custom-select {
-  width: 100%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: var(--white);
-  border: 2px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md) var(--spacing-2xl) var(--spacing-md) 3rem;
-  /* Left padding for icon */
-  font-size: 1rem;
-  font-family: var(--font-family-sans);
+.search-tags {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-tag {
+  padding: 6px 16px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
   font-weight: var(--font-weight-medium);
-  color: var(--gray-700);
   cursor: pointer;
   transition: all var(--transition-normal);
+  border: 1px solid transparent;
 }
 
-.custom-select:hover,
-.custom-select:focus {
-  border-color: var(--accent-color);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-.select-icon {
-  position: absolute;
-  left: var(--spacing-md);
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accent-color);
-  pointer-events: none;
-  font-size: 1.1rem;
-}
-
-.select-arrow {
-  position: absolute;
-  right: var(--spacing-md);
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--gray-500);
-  pointer-events: none;
-  font-size: 0.8rem;
-}
-
-/* Dark mode for custom selects */
-[data-theme="dark"] .custom-select {
-  background: var(--gray-100);
-  border-color: var(--gray-400);
+.search-tag:hover {
+  background: var(--gray-200);
   color: var(--gray-900);
 }
 
-[data-theme="dark"] .custom-select:hover,
-[data-theme="dark"] .custom-select:focus {
-  border-color: var(--accent-color);
+.search-tag.active {
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+/* Dark mode for search tags */
+[data-theme="dark"] .search-tag {
+  background: var(--gray-200);
+  color: var(--gray-800);
+}
+
+[data-theme="dark"] .search-tag:hover {
+  background: var(--gray-300);
+}
+
+[data-theme="dark"] .search-tag.active {
+  background: var(--accent-color);
+  color: var(--white);
 }
 
 [data-theme="dark"] .select-arrow {
@@ -5403,28 +5391,25 @@ select {
   .search-input-wrapper {
     /* Keep horizontal layout */
     padding: 0 var(--spacing-sm);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .search-input-wrapper i {
-    /* Restore icon spacing */
-    margin-right: var(--spacing-sm);
-    margin-bottom: 0;
+  .search-bar {
+    width: 100%;
+    padding: 0;
+    margin-bottom: var(--spacing-xl);
   }
 
-  .search-input-wrapper .btn {
-    /* Restore button spacing */
-    margin-left: var(--spacing-xs);
-    width: auto;
+  .search-tags-container {
     padding: 0 var(--spacing-md);
   }
 
-  .filter-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .custom-select-container {
+  .tags-label {
     width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-xs);
   }
 
   .blog-posts {
