@@ -475,7 +475,6 @@
             min-height: 100vh;
         }
 
-        /* Dashboard Header */
         .dashboard-header {
             padding: var(--spacing-xl) var(--spacing-2xl);
             border-bottom: 1px solid var(--gray-200);
@@ -483,6 +482,24 @@
             justify-content: space-between;
             align-items: flex-start;
             background-color: var(--white);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .header-right .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .header-right .btn i {
+            font-size: 1rem;
+            margin: 0;
         }
 
         .page-title {
@@ -747,7 +764,57 @@
 
             .nav-item a {
                 display: flex !important;
-                color: #CBD5E0 !important;
+                color: #1A365D !important;
+            }
+
+            /* Dark mode mobile sidebar styles */
+            [data-theme="dark"] .nav-item a {
+                color: #FFFFFF !important;
+            }
+
+            [data-theme="dark"] .sidebar-toggle-btn,
+            [data-theme="dark"] .mobile-theme-toggle {
+                color: #FFFFFF !important;
+            }
+
+            [data-theme="light"] .sidebar-toggle-btn,
+            [data-theme="light"] .mobile-theme-toggle {
+                color: #1A365D !important;
+            }
+
+            [data-theme="light"] .sidebar {
+                background-color: #FFFFFF;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            [data-theme="dark"] .sidebar {
+                background-color: #1a202c;
+            }
+
+            .nav-item a {
+                color: #4A5568 !important;
+                /* Default for mobile */
+            }
+
+            [data-theme="light"] .nav-item a {
+                color: #2D3748 !important;
+            }
+
+            [data-theme="dark"] .nav-item a {
+                color: #E2E8F0 !important;
+            }
+
+            [data-theme="light"] .nav-item:hover a,
+            [data-theme="light"] .nav-item.active a {
+                color: #1A365D !important;
+                background-color: #EDF2F7 !important;
+                font-weight: 600;
+            }
+
+            [data-theme="dark"] .nav-item:hover a,
+            [data-theme="dark"] .nav-item.active a {
+                color: #FFFFFF !important;
+                background-color: rgba(255, 255, 255, 0.1) !important;
             }
 
             .nav-item a span {
