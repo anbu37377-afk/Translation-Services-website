@@ -24,11 +24,38 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/menu-icon.css">
+    <style>
+        /* Login-only spacing fix: reduce empty top/bottom space around the auth card */
+        .login-auth-section {
+            margin: 0;
+            padding: 72px 0 36px;
+            min-height: auto;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 480px) {
+            .login-auth-section {
+                padding: 64px var(--spacing-md) 24px;
+            }
+
+            .login-auth-section .auth-options {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: var(--spacing-sm);
+            }
+
+            .login-auth-section .auth-options .forgot-password {
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Login Section -->
-    <section class="auth-section">
+    <section class="auth-section login-auth-section">
         <div class="auth-container scale-in">
             <!-- Brand Logo -->
             <div class="auth-brand">

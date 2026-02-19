@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/menu-icon.css">
 </head>
 
-<body>
+<body class="contact-page">
     <!-- Header -->
     <header class="header">
         <div class="header-bg"></div>
@@ -342,7 +342,7 @@
                             <p><i class="fas fa-envelope"></i> london@linguaflow.com</p>
                         </div>
                         <div class="location-hours">
-                            <p><strong>Hours:</strong> Mon-Fri 9:00 AM - 6:00 PM GMT</p>
+                            <p><strong>Hours:</strong> Mon-Fri 9AM-6PM GMT</p>
                         </div>
                     </div>
                 </div>
@@ -609,6 +609,18 @@
     </script>
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <style>
+        /* Contact-only fixes */
+        .contact-page .support-actions .btn-primary,
+        .contact-page .support-actions .btn-primary i {
+            color: var(--accent-color) !important;
+        }
+
+        .contact-page .support-actions .btn-primary:hover,
+        .contact-page .support-actions .btn-primary:hover i {
+            color: var(--accent-dark) !important;
+        }
+    </style>
 </body>
 
 </html>

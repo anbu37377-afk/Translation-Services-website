@@ -245,6 +245,7 @@ body {
   --gray-900: #0f172a;
 
   /* Typography */
+  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'Fira Code', 'Courier New', monospace;
 
@@ -2475,7 +2476,7 @@ section.cta .section-subtitle {
 
 .cta .btn-outline:hover {
   background-color: var(--white);
-  color: var(--accent-color);
+  color: var(--accent-color) !important;
 }
 
 /* ===== FOOTER ===== */
@@ -7943,4 +7944,79 @@ textarea {
 .form-actions .btn {
   margin: 0 !important;
   flex: 0 1 auto !important;
+}
+
+/* Requested refinement: typography + header/section spacing consistency */
+:root {
+  --page-inline-padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+.header .nav-container {
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  padding-left: var(--page-inline-padding);
+  padding-right: var(--page-inline-padding);
+}
+
+section .container,
+.footer .container {
+  padding-left: var(--page-inline-padding) !important;
+  padding-right: var(--page-inline-padding) !important;
+}
+
+/* Home page: Translation services cards alignment + CTA emphasis */
+.home-categories .category-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.home-categories .category-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-categories .category-card p {
+  flex-grow: 1;
+}
+
+.home-categories .category-card .btn-secondary {
+  margin-top: auto !important;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-categories .category-card .btn-secondary:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .home-categories .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-categories .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Home 2: keep both centered stats groups in a single row */
+.home2-page .legal-stats-center,
+.home2-page .medical-stats-center {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: var(--spacing-xl);
+}
+
+.home2-page .legal-stat-center,
+.home2-page .medical-stat-center {
+  flex: 0 0 220px;
+  min-width: 220px;
 }

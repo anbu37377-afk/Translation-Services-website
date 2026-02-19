@@ -24,9 +24,30 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/menu-icon.css">
+    <style>
+        /* Languages page: Translate CTA button visibility + alignment fix */
+        .languages-page .translate-cta .cta-actions {
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .languages-page .translate-cta .cta-actions .btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            min-width: 220px;
+            text-align: center;
+        }
+
+        .languages-page .translate-cta .btn-outline:hover {
+            color: var(--accent-color) !important;
+        }
+    </style>
 </head>
 
-<body>
+<body class="languages-page">
     <!-- Header -->
     <header class="header">
         <div class="header-bg"></div>
@@ -384,7 +405,7 @@
 
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta translate-cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title fade-in">Translate in Any Language</h2>
