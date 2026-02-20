@@ -8020,3 +8020,183 @@ section .container,
   flex: 0 0 220px;
   min-width: 220px;
 }
+
+/* Home 2: align stat cards and technical badge rows */
+.home2-page .legal-stats-center,
+.home2-page .medical-stats-center {
+  align-items: stretch;
+}
+
+.home2-page .legal-stat-center,
+.home2-page .medical-stat-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home2-page .technical-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.home2-page .technical-category .category-description {
+  flex-grow: 1;
+}
+
+.home2-page .technical-category .expert-badges {
+  margin-top: auto;
+}
+
+/* Home 2: keep legal/medical CTA buttons consistently centered */
+.home2-page .legal-content .btn,
+.home2-page .medical-content .btn {
+  display: block !important;
+  width: fit-content !important;
+  max-width: none !important;
+  margin: var(--spacing-lg) auto 0 !important;
+}
+
+/* Home 2: stack section header text on tablet/mobile */
+@media (max-width: 1024px) {
+  .home2-page .section-header {
+    display: block !important;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .home2-page .section-header .section-title,
+  .home2-page .section-header .section-subtitle {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* Languages page: tablet-only card alignment */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .languages-page .language-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .languages-page .language-content {
+    text-align: center;
+  }
+
+  .languages-page .language-status {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Pricing page: keep comparison layout stable on tablet/mobile */
+@media (max-width: 1024px) {
+  .pricing-comparison .comparison-table {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .pricing-comparison .comparison-header,
+  .pricing-comparison .comparison-row {
+    grid-template-columns: minmax(180px, 2fr) minmax(220px, 1fr) minmax(220px, 1fr);
+    min-width: 760px;
+  }
+}
+
+/* Pricing page: keep section subtitle below heading on tablet/mobile */
+@media (max-width: 1024px) {
+  .pricing-page .section-header {
+    display: block !important;
+    text-align: center;
+  }
+
+  .pricing-page .section-header .section-title,
+  .pricing-page .section-header .section-subtitle {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .pricing-page .section-header .section-subtitle {
+    margin-top: var(--spacing-sm);
+  }
+}
+
+/* Pricing page: prevent CTA/Hero button overlap on tablet/mobile */
+@media (max-width: 1024px) {
+  .pricing-page .hero-actions,
+  .pricing-page .cta-actions {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  .pricing-page .hero-actions .btn,
+  .pricing-page .cta-actions .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+/* Blog page: keep action buttons aligned */
+@media (max-width: 1024px) {
+  .blog-page .hero-actions,
+  .blog-page .cta-actions {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  .blog-page .hero-actions .btn,
+  .blog-page .cta-actions .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}
+
+/* Contact page: align contact and location cards consistently */
+.contact-page .contact-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-page .contact-details {
+  flex-grow: 1;
+}
+
+.contact-page .contact-card .btn {
+  margin-top: auto !important;
+}
+
+.contact-page .location-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-page .location-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contact-page .location-details {
+  flex-grow: 1;
+}
+
+.contact-page .location-hours {
+  margin-top: auto;
+}
