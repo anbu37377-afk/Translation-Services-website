@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* ===== BRAND IDENTITY ===== */
 *,
 *::before,
@@ -245,8 +247,8 @@ body {
   --gray-900: #0f172a;
 
   /* Typography */
-  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family: 'Manrope', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'Fira Code', 'Courier New', monospace;
 
   /* Font Sizes */
@@ -7952,8 +7954,8 @@ textarea {
 }
 
 .header .nav-container {
-  padding-top: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
   padding-left: var(--page-inline-padding);
   padding-right: var(--page-inline-padding);
 }
@@ -8034,9 +8036,73 @@ section .container,
   justify-content: center;
 }
 
+.home2-page .legal-stat-center {
+  row-gap: var(--spacing-sm);
+}
+
+.home2-page .legal-stat-center .stat-number-center {
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.home2-page .legal-stats-center .legal-stat-center:first-child .stat-number-center {
+  font-size: 2.65rem;
+  line-height: 1;
+}
+
+.home2-page .legal-stats-center .legal-stat-center:first-child .stat-label-center {
+  font-size: 1.1rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* Navbar: increase height, center menu links, and improve link legibility */
+.header .nav-container {
+  min-height: 86px;
+}
+
+.header .nav-menu {
+  justify-content: center;
+}
+
+.header .nav-links {
+  justify-content: center;
+}
+
+.header .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
 .home2-page .technical-category {
   display: flex;
   flex-direction: column;
+}
+
+.features .feature-grid {
+  align-items: stretch;
+}
+
+.features .feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.features .feature-card h3 {
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .feature-card p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .home2-page .technical-category .category-description {
@@ -8187,6 +8253,10 @@ section .container,
   height: 100%;
 }
 
+.contact-page .locations-grid {
+  align-items: stretch;
+}
+
 .contact-page .location-info {
   display: flex;
   flex-direction: column;
@@ -8199,4 +8269,7 @@ section .container,
 
 .contact-page .location-hours {
   margin-top: auto;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
 }

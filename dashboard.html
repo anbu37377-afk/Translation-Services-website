@@ -375,7 +375,7 @@
             gap: var(--spacing-sm);
             font-weight: var(--font-weight-bold);
             font-size: 1.25rem;
-            color: var(--white);
+            color: var(--gray-900);
             text-decoration: none;
         }
 
@@ -517,6 +517,9 @@
         /* Page Content */
         .page-content {
             padding: var(--spacing-2xl) var(--spacing-3xl);
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         /* Stats Grid */
@@ -525,6 +528,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: var(--spacing-xl);
             margin-bottom: var(--spacing-2xl);
+            align-items: stretch;
         }
 
         .stat-card {
@@ -536,6 +540,7 @@
             display: flex;
             align-items: center;
             gap: var(--spacing-lg);
+            height: 100%;
         }
 
         .stat-icon {
@@ -592,11 +597,22 @@
             padding: var(--spacing-xl);
             box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
             border: 1px solid var(--gray-200);
+            height: 100%;
         }
 
         .chart-container {
             background: var(--white) !important;
             border: 1px solid var(--gray-200) !important;
+        }
+
+        .chart-card .chart-container {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        #users-page thead tr {
+            background: transparent !important;
         }
 
         .chart-placeholder {
@@ -652,7 +668,7 @@
             gap: var(--spacing-sm);
             font-weight: var(--font-weight-bold);
             font-size: 1.25rem;
-            color: var(--white);
+            color: var(--gray-900);
             text-decoration: none;
         }
 
@@ -721,6 +737,23 @@
         .sidebar-overlay.active {
             display: block;
             opacity: 1;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-md);
+            }
+
+            .header-right {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .chart-row {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Responsive Design */
