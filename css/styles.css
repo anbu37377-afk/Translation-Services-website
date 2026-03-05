@@ -8277,6 +8277,27 @@ section .container,
 .contact-page .location-hours {
   margin-top: auto;
   min-height: 68px;
-  display: flex;
+  display: flex !important;
   align-items: center;
+}
+
+/* Global Section Header Responsive Fix (All pages except Home) */
+@media (max-width: 1024px) {
+  body:not(.home-page):not(.home2-page) .section-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl) !important;
+  }
+
+  body:not(.home-page):not(.home2-page) .section-header .section-title,
+  body:not(.home-page):not(.home2-page) .section-header .section-subtitle {
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 }
