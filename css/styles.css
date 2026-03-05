@@ -8281,9 +8281,9 @@ section .container,
   align-items: center;
 }
 
-/* Global Section Header Responsive Fix (All pages except Home) */
+/* Global Section Header Responsive Fix (All pages) */
 @media (max-width: 1024px) {
-  body:not(.home-page):not(.home2-page) .section-header {
+  .section-header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -8292,8 +8292,8 @@ section .container,
     margin-bottom: var(--spacing-xl) !important;
   }
 
-  body:not(.home-page):not(.home2-page) .section-header .section-title,
-  body:not(.home-page):not(.home2-page) .section-header .section-subtitle {
+  .section-header .section-title,
+  .section-header .section-subtitle {
     max-width: 100% !important;
     width: 100% !important;
     text-align: center !important;
