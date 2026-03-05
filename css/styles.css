@@ -8176,29 +8176,31 @@ section .container,
   }
 }
 
-/* Pricing page: keep section subtitle below heading on tablet/mobile */
+/* Global Section Header Responsive Fix (All pages except Home) */
 @media (max-width: 1024px) {
-  .pricing-page .section-header {
-    display: block !important;
-    text-align: center;
+  body:not(.home-page):not(.home2-page) .section-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl) !important;
   }
 
-  .pricing-page .section-header .section-title,
-  .pricing-page .section-header .section-subtitle {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .pricing-page .section-header .section-subtitle {
-    margin-top: var(--spacing-sm);
+  body:not(.home-page):not(.home2-page) .section-header .section-title,
+  body:not(.home-page):not(.home2-page) .section-header .section-subtitle {
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
 
-/* Pricing page: prevent CTA/Hero button overlap on tablet/mobile */
+/* Pricing page fixes */
 @media (max-width: 1024px) {
 
+  /* Pricing page: prevent CTA/Hero button overlap on tablet/mobile */
   .pricing-page .hero-actions,
   .pricing-page .cta-actions {
     justify-content: center !important;
